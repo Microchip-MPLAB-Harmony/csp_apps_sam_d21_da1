@@ -219,7 +219,7 @@ void DMAC_ChannelDisable ( DMAC_CHANNEL channel )
     DMAC_REGS->DMAC_CHID = channel;
 
     /* Disable the DMA channel */
-    DMAC_REGS->DMAC_CHCTRLA &= (~DMAC_CHCTRLA_ENABLE_Pos);
+    DMAC_REGS->DMAC_CHCTRLA &= (~DMAC_CHCTRLA_ENABLE_Msk);
 
     while((DMAC_REGS->DMAC_CHCTRLA & DMAC_CHCTRLA_ENABLE_Msk) != 0);
 
@@ -315,7 +315,10 @@ bool DMAC_ChannelSettingsSet (DMAC_CHANNEL channel, DMAC_CHANNEL_CONFIG setting)
     DMAC_REGS->DMAC_CHID = channel;
 
     /* Disable the DMA channel */
-    DMAC_REGS->DMAC_CHCTRLA &= (~DMAC_CHCTRLA_ENABLE_Pos);
+    DMAC_REGS->DMAC_CHCTRLA &= (~DMAC_CHCTRLA_ENABLE_Msk);
+
+    /* Wait for channel to be disabled */
+    while((DMAC_REGS->DMAC_CHCTRLA & DMAC_CHCTRLA_ENABLE_Msk) != 0);
 
     /* Set the new settings */
     dmacDescReg[channel].DMAC_BTCTRL = setting;

@@ -52,6 +52,6 @@ The following table shows the target hardware for the application projects.
 
 | Board      | DACC output pins |
 | ----------------- |-----------|
-| [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | PA02 (Pin 3 of the EXT1 header) |
+| [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | PA02 (Pin 3 of the EXT3 header) |
 | [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | PA02 (Pin 3 of the EXT3 header) |
 |||
