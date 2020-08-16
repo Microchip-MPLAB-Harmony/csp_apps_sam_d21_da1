@@ -45,28 +45,43 @@
 #include "device.h"
 #include <stdlib.h>
 
+static void RTC_CountReadSynchronization(void)
+{
+   /* Read-synchronization for COUNT register */
+   RTC_REGS->MODE0.RTC_READREQ = RTC_READREQ_RREQ_Msk | RTC_READREQ_ADDR(0x10);
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Read-Synchronization */
+   }
+}
 
 void RTC_Initialize(void)
 {
-    RTC_REGS->MODE0.RTC_CTRL = RTC_MODE0_CTRL_SWRST_Msk;
+   /* Writing to CTRL register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_CTRL = RTC_MODE0_CTRL_SWRST_Msk;
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
 
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for Synchronization after Software Reset */
-    }
+   /* Writing to CTRL register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_CTRL = RTC_MODE0_CTRL_MODE(0) | RTC_MODE0_CTRL_PRESCALER(0x0) | RTC_MODE0_CTRL_MATCHCLR_Msk;
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
 
-    RTC_REGS->MODE0.RTC_READREQ |= RTC_READREQ_RCONT_Msk;
+   /* Writing to COMP register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_COMP = 0x200;
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
 
-    RTC_REGS->MODE0.RTC_CTRL = RTC_MODE0_CTRL_MODE(0) | RTC_MODE0_CTRL_PRESCALER(0x0) |RTC_MODE0_CTRL_MATCHCLR_Msk;
+   RTC_REGS->MODE0.RTC_EVCTRL = 0x100;
 
-    RTC_REGS->MODE0.RTC_COMP = 0x200;
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for Synchronization after writing Compare Value */
-    }
-
-RTC_REGS->MODE0.RTC_EVCTRL = 0x100;
 }
+
 
 
 
@@ -101,64 +116,61 @@ bool RTC_Timer32CounterHasOverflowed ( void )
 
 void RTC_Timer32Start ( void )
 {
-    RTC_REGS->MODE0.RTC_CTRL |= RTC_MODE0_CTRL_ENABLE_Msk;
-
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for synchronization after Enabling RTC */
-    }
+   /* Writing to CTRL register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_CTRL |= RTC_MODE0_CTRL_ENABLE_Msk;
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-synchronization */
+   }
 }
 
 void RTC_Timer32Stop ( void )
 {
-    RTC_REGS->MODE0.RTC_CTRL &= ~(RTC_MODE0_CTRL_ENABLE_Msk);
-
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for Synchronization after Disabling RTC */
-    }
+   /* Writing to CTRL register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_CTRL &= ~(RTC_MODE0_CTRL_ENABLE_Msk);
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
 }
 
 void RTC_Timer32CounterSet ( uint32_t count )
 {
-    RTC_REGS->MODE0.RTC_COUNT = count;
-
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for Synchronization after writing value to Count Register */
-    }
+   /* Writing to COUNT register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_COUNT = count;
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
 }
 
 void RTC_Timer32CompareSet ( uint32_t compareValue )
 {
-    RTC_REGS->MODE0.RTC_COMP = compareValue;
-
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for Synchronization after writing Compare Value */
-    }
+   /* Writing to COMP register will trigger write-synchronization */
+   RTC_REGS->MODE0.RTC_COMP = compareValue;
+   while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
+   {
+       /* Wait for Write-Synchronization */
+   }
 }
 
 uint32_t RTC_Timer32CounterGet ( void )
 {
-    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
-    {
-        /* Wait for Synchronization before reading value from Count Register */
-    }
-
-    return(RTC_REGS->MODE0.RTC_COUNT) + 6;
+   /* Enable read-synchronization for COUNT register to avoid CPU stall */
+   RTC_CountReadSynchronization();
+   return(RTC_REGS->MODE0.RTC_COUNT);
 }
 
 uint32_t RTC_Timer32PeriodGet ( void )
 {
-    /* Get 32Bit Compare Value */
-    return (RTC_MODE0_COUNT_COUNT_Msk);
+   /* Get 32Bit Compare Value */
+   return (RTC_MODE0_COUNT_COUNT_Msk);
 }
 
 uint32_t RTC_Timer32FrequencyGet ( void )
 {
-    /* Return Frequency of RTC Clock */
-    return RTC_COUNTER_CLOCK_FREQUENCY;
+   /* Return Frequency of RTC Clock */
+   return RTC_COUNTER_CLOCK_FREQUENCY;
 }
 
 
