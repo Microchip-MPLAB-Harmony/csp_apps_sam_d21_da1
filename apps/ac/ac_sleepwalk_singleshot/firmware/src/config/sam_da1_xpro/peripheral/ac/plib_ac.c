@@ -43,6 +43,7 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 // DOM-IGNORE-END
+#include "device.h"
 #include "plib_ac.h"
 
 AC_OBJECT acObj;
@@ -61,7 +62,9 @@ void AC_Initialize(void)
     {
         /* Wait for Synchronization */
     }
-     /* Disable the module and configure COMPCTRL */
+     
+    /**************** Comparator 0 Configurations ************************/ 
+    /* Disable the module and configure COMPCTRL */
     while((AC_REGS->AC_STATUSB & AC_STATUSB_SYNCBUSY_Msk) == AC_STATUSB_SYNCBUSY_Msk)
     {
         /* Wait for Synchronization */
@@ -72,7 +75,7 @@ void AC_Initialize(void)
     {
         /* Wait for Synchronization */
     }
-    AC_REGS->AC_COMPCTRL[0] = AC_COMPCTRL_MUXPOS_PIN0 | AC_COMPCTRL_MUXNEG_BANDGAP | AC_COMPCTRL_INTSEL_EOC | AC_COMPCTRL_OUT_OFF | AC_COMPCTRL_SPEED(0) | AC_COMPCTRL_SINGLE_Msk;
+    AC_REGS->AC_COMPCTRL[0] = AC_COMPCTRL_MUXPOS_PIN0 | AC_COMPCTRL_MUXNEG_BANDGAP | AC_COMPCTRL_INTSEL_EOC | AC_COMPCTRL_OUT_OFF | AC_COMPCTRL_SPEED(0) | AC_COMPCTRL_FLEN_OFF | AC_COMPCTRL_SINGLE_Msk;
     AC_REGS->AC_COMPCTRL[0] |= AC_COMPCTRL_ENABLE_Msk;
     AC_REGS->AC_SCALER[0] = 0;
 
@@ -116,6 +119,27 @@ void AC_SwapInputs( AC_CHANNEL channel_id )
     AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_ENABLE_Msk;
 }
 
+void AC_ChannelSelect( AC_CHANNEL channel_id , AC_POSINPUT positiveInput, AC_NEGINPUT negativeInput)
+{
+    /* Disable comparator before swapping */
+    AC_REGS->AC_COMPCTRL[channel_id] &= ~AC_COMPCTRL_ENABLE_Msk;
+    /* Check Synchronization to ensure that the comparator is disabled */
+    while((AC_REGS->AC_STATUSB & AC_STATUSB_SYNCBUSY_Msk) == AC_STATUSB_SYNCBUSY_Msk)
+    {
+        /* Wait for Synchronization */
+    }
+    AC_REGS->AC_COMPCTRL[channel_id] &= ~(AC_COMPCTRL_MUXPOS_Msk | AC_COMPCTRL_MUXNEG_Msk);
+    AC_REGS->AC_COMPCTRL[channel_id] |= (positiveInput | negativeInput);
+
+    /* Enable comparator channel */
+    AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_ENABLE_Msk;
+    while((AC_REGS->AC_STATUSB & AC_STATUSB_SYNCBUSY_Msk) == AC_STATUSB_SYNCBUSY_Msk)
+    {
+        /* Wait for Synchronization */
+    } 
+
+}
+
 bool AC_StatusGet (AC_CHANNEL channel)
 {
     bool breturnVal = false;
@@ -131,7 +155,7 @@ bool AC_StatusGet (AC_CHANNEL channel)
             breturnVal = false;
         }
     }
-    
+
     return breturnVal;
 }
 
