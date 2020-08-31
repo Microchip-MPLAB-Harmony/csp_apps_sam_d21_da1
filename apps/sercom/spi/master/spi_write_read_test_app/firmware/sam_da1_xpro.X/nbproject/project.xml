@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>sp_masteri_write_read_test_app_sam_da1_xpro</name>
+            <name>spi_master_write_read_test_app_sam_da1_xpro</name>
             <creation-uuid>e54023e9-3948-44ef-bf6f-29d8b223e555</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
