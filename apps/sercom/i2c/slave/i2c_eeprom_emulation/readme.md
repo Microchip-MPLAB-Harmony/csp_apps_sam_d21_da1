@@ -1,3 +1,10 @@
+---
+parent: Harmony 3 peripheral library application examples for SAM D21/DA1 family
+title: SERCOM I2C EEPROM emulation (I2C slave) 
+has_children: false
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # SERCOM I2C EEPROM emulation (I2C slave)
@@ -23,9 +30,8 @@ To run the application, two evaluation kits will be required - one acting as the
 
 ## Downloading and building the application
 
-To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1) and click
-
-![clone](../../../../../docs/images/clone.png)
+To clone or download this application from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1) and then click **Clone** button to clone this repository or download as zip file.
+This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
 Path of the application within the repository is **apps/sercom/i2c/slave/i2c_eeprom_emulation/firmware** .
 

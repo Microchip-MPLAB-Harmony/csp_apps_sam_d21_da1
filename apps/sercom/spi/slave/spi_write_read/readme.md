@@ -1,3 +1,10 @@
+---
+parent: Harmony 3 peripheral library application examples for SAM D21/DA1 family
+title: SERCOM SPI Slave read write 
+has_children: false
+has_toc: false
+---
+
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # SERCOM SPI Slave read write
