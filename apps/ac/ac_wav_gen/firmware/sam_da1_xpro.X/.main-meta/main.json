@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_d21_da1_conf_da1_ac_wav_gen",
+		"version": "3.0.1",
+		"displayName": "AC PWM generation Example for SAM D21/DA1 Family",
+		"projectName": "ac_wav_gen_sam_da1_xpro",
+		"shortDescription": "This example application shows how to use the Analog Comparator Peripheral library to generate a 1KHz PWM waveform.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMDA1_DFP",
+			"semverRange": "^2.3.56"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMDA1J16B",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM DA1 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "AC"
+			],
+			[
+				"Peripherals", "AC"
+			]
+		],
+		"peripherals": [
+			"AC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMDA1J16B",
+			"SAM D21/DA1 Family",
+			"AC voltage",
+			"AC",
+			"Analog Comparator",
+			"Comparator",
+			"Analog"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

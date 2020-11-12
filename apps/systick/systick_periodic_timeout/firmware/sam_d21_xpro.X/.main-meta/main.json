@@ -1,0 +1,76 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_d21_da1_systick_periodic_timeout",
+		"version": "3.0.1",
+		"displayName": "Systick periodic interrupt Example for SAM D21/DA1 Family",
+		"projectName": "systick_periodic_timeout_sam_d21_xpro",
+		"shortDescription": "This example shows how to use the SysTick to generate periodic interrupts.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMD21_DFP",
+			"semverRange": "^3.3.98"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMD21J18A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "SYSTICK"
+			],
+			[
+				"Peripherals", "SYSTICK"
+			]
+		],
+		"peripherals": [
+			"SYSTICK"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMD21J18A",
+			"SAM D21/DA1 Family",
+			"System Timer",
+			"Core Timer",
+			"Timer",
+			"Counter"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

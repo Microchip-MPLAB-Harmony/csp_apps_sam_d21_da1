@@ -1,0 +1,79 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_d21_da1_spi_self_loopback_blocking",
+		"version": "3.0.1",
+		"displayName": "SERCOM SPI blocking Example for SAM D21/DA1 Family",
+		"projectName": "spi_self_loopback_blocking_sam_d21_xpro",
+		"shortDescription": "This example application demonstrates how to use the SERCOM SPI peripheral to transmit and receive a block of data in a blocking manner.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMD21_DFP",
+			"semverRange": "^3.3.98"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMD21J18A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "SERCOM"
+			],
+			[
+				"Peripherals", "SERCOM"
+			]
+		],
+		"peripherals": [
+			"SERCOM"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMD21J18A",
+			"SAM D21/DA1 Family",
+			"FLEXCOM",
+			"Serial Communication",
+			"I2C",
+			"SPI",
+			"UART",
+			"SERCOM",
+			"TWI"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

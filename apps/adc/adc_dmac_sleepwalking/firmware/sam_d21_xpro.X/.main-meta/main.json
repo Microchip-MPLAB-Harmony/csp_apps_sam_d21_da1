@@ -1,0 +1,76 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_d21_da1_adc_dmac_sleepwalking",
+		"version": "3.0.1",
+		"displayName": "ADC DMA sleepwalking Example for SAM D21/DA1 Family",
+		"projectName": "adc_dmac_sleepwalking_sam_d21_xpro",
+		"shortDescription": "This application shows how to configure the ADC in a sleepwalking operation, where the input voltage is measured at a fixed interval, and then the device is woken from sleep after conversion of 16 samples.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "CMSIS",
+			"semverRange": "^5.4.0"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMD21J18A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "ADC"
+			],
+			[
+				"Peripherals", "ADC"
+			]
+		],
+		"peripherals": [
+			"ADC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMD21J18A",
+			"SAM D21/DA1 Family",
+			"AC voltage",
+			"Analog to Digital Converter",
+			"ADC",
+			"Analog"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

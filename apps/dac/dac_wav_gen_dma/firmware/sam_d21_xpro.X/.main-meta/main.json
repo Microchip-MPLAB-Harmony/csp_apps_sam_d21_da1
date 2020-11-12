@@ -1,0 +1,78 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_sam_d21_da1_dac_wav_gen_dma",
+		"version": "3.0.1",
+		"displayName": "DAC waveform generation with DMA Example for SAM D21/DA1 Family",
+		"projectName": "dac_wav_gen_dma_sam_d21_xpro",
+		"shortDescription": "This example application shows how to use the DAC with the DMA to generate a 5 KHz sinusoidal waveform without CPU intervention.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMD21_DFP",
+			"semverRange": "^3.3.98"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMD21J18A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAM D21 Xplained Pro Evaluation Kit"
+			],
+			[
+				"Harmony", "Peripherals", "DAC"
+			],
+			[
+				"Peripherals", "DAC"
+			]
+		],
+		"peripherals": [
+			"DAC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMD21J18A",
+			"SAM D21/DA1 Family",
+			"CDAC",
+			"Control DAC",
+			"DAC",
+			"Digital to Analog Converter",
+			"Analog",
+			"AC Voltage"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
