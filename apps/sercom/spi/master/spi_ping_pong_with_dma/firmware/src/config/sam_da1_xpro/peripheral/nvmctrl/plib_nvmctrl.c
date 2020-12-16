@@ -48,6 +48,7 @@
 // *****************************************************************************
 
 #include <string.h>
+#include "interrupts.h"
 #include "plib_nvmctrl.h"
 
 static uint32_t status = 0;
@@ -61,37 +62,38 @@ static uint32_t status = 0;
 
 void NVMCTRL_Initialize(void)
 {
-    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_READMODE_NO_MISS_PENALTY | NVMCTRL_CTRLB_SLEEPPRM_WAKEONACCESS | NVMCTRL_CTRLB_RWS(1) | NVMCTRL_CTRLB_MANW_Msk;
+    NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_READMODE_NO_MISS_PENALTY | NVMCTRL_CTRLB_SLEEPPRM_WAKEONACCESS | NVMCTRL_CTRLB_RWS(1UL) | NVMCTRL_CTRLB_MANW_Msk;
 }
 
 void NVMCTRL_CacheInvalidate(void)
 {
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_INVALL | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_INVALL | NVMCTRL_CTRLA_CMDEX_KEY);
 }
 bool NVMCTRL_RWWEEPROM_Read( uint32_t *data, uint32_t length, const uint32_t address )
 {
-    memcpy((void *)data, (void *)address, length);
+    uint32_t *paddress = (uint32_t*)address;
+    memcpy(data, paddress, length);
     return true;
 }
 
 bool NVMCTRL_RWWEEPROM_PageWrite ( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0;
+    uint32_t i = 0U;
     uint32_t * paddress = (uint32_t *)address;
 
     /* Clear global error flag */
-    status = 0;
+    status = 0U;
 
     /* Writing 32-bit words in the given address */
-    for ( i = 0; i < (NVMCTRL_RWWEEPROM_PAGESIZE/4); i++)
+    for ( i = 0U; i < (NVMCTRL_RWWEEPROM_PAGESIZE/4U); i++)
     {
         *paddress++ = data[i];
     }
 
      /* Set address and command */
-    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1;
+    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1U;
 
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_RWWEEWP | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_RWWEEWP | NVMCTRL_CTRLA_CMDEX_KEY);
 
     return true;
 }
@@ -99,39 +101,40 @@ bool NVMCTRL_RWWEEPROM_PageWrite ( uint32_t *data, const uint32_t address )
 bool NVMCTRL_RWWEEPROM_RowErase( uint32_t address )
 {
     /* Clear global error flag */
-    status = 0;
+    status = 0U;
 
      /* Set address and command */
-    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1;
+    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1U;
 
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_RWWEEER | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_RWWEEER | NVMCTRL_CTRLA_CMDEX_KEY);
 
     return true;
 }
 bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address )
 {
-    memcpy((void *)data, (void *)address, length);
+    uint32_t *paddress = (uint32_t*)address;
+    memcpy(data, paddress, length);
     return true;
 }
 
 bool NVMCTRL_PageWrite( uint32_t *data, const uint32_t address )
 {
-    uint32_t i = 0;
+    uint32_t i = 0U;
     uint32_t * paddress = (uint32_t *)address;
 
     /* Clear global error flag */
-    status = 0;
+    status = 0U;
 
     /* writing 32-bit data into the given address */
-    for (i = 0; i < (NVMCTRL_FLASH_PAGESIZE/4); i++)
+    for (i = 0U; i < (NVMCTRL_FLASH_PAGESIZE/4U); i++)
     {
         *paddress++ = data[i];
     }
 
      /* Set address and command */
-    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1;
+    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1U;
 
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_WP_Val | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_WP_Val | NVMCTRL_CTRLA_CMDEX_KEY);
 
     return true;
 }
@@ -139,12 +142,12 @@ bool NVMCTRL_PageWrite( uint32_t *data, const uint32_t address )
 bool NVMCTRL_RowErase( uint32_t address )
 {
     /* Clear global error flag */
-    status = 0;
+    status = 0U;
 
     /* Set address and command */
-    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1;
+    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1U;
 
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_ER_Val | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_ER_Val | NVMCTRL_CTRLA_CMDEX_KEY);
 
     return true;
 }
@@ -157,27 +160,27 @@ NVMCTRL_ERROR NVMCTRL_ErrorGet( void )
 
 bool NVMCTRL_IsBusy(void)
 {
-    return (bool)(!(NVMCTRL_REGS->NVMCTRL_INTFLAG & NVMCTRL_INTFLAG_READY_Msk));
+    return ((NVMCTRL_REGS->NVMCTRL_INTFLAG & NVMCTRL_INTFLAG_READY_Msk)!= NVMCTRL_INTFLAG_READY_Msk);
 }
 
 void NVMCTRL_RegionLock(uint32_t address)
 {
     /* Clear global error flag */
-    status = 0;
+    status = 0U;
 
     /* Set address and command */
-    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1;
+    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1U;
 
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_LR_Val | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_LR_Val | NVMCTRL_CTRLA_CMDEX_KEY);
 }
 
 void NVMCTRL_RegionUnlock(uint32_t address)
 {
     /* Clear global error flag */
-    status = 0;
+    status = 0U;
 
     /* Set address and command */
-    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1;
+    NVMCTRL_REGS->NVMCTRL_ADDR = address >> 1U;
 
-    NVMCTRL_REGS->NVMCTRL_CTRLA = NVMCTRL_CTRLA_CMD_UR_Val | NVMCTRL_CTRLA_CMDEX_KEY;
+    NVMCTRL_REGS->NVMCTRL_CTRLA = (uint16_t)(NVMCTRL_CTRLA_CMD_UR_Val | NVMCTRL_CTRLA_CMDEX_KEY);
 }

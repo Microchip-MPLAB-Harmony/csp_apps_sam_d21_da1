@@ -108,7 +108,14 @@ void DMAC_ChannelCallbackRegister (DMAC_CHANNEL channel, const DMAC_CHANNEL_CALL
 bool DMAC_ChannelTransfer (DMAC_CHANNEL channel, const void *srcAddr, const void *destAddr, size_t blockSize);
 bool DMAC_ChannelIsBusy ( DMAC_CHANNEL channel );
 void DMAC_ChannelDisable ( DMAC_CHANNEL channel );
+void DMAC_LinkedListDescriptorSetup (dmac_descriptor_registers_t* currentDescriptor,
+                                                    DMAC_CHANNEL_CONFIG setting,
+                                                    const void *srcAddr,
+                                                    const void *destAddr,
+                                                    size_t blockSize,
+                                                    dmac_descriptor_registers_t* nextDescriptor);
 bool DMAC_ChannelLinkedListTransfer ( DMAC_CHANNEL channel, dmac_descriptor_registers_t * channelDesc );
+
 
 DMAC_CHANNEL_CONFIG  DMAC_ChannelSettingsGet ( DMAC_CHANNEL channel );
 bool  DMAC_ChannelSettingsSet ( DMAC_CHANNEL channel, DMAC_CHANNEL_CONFIG settings );
