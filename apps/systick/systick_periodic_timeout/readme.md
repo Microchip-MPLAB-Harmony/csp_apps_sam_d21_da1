@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for SAM D21/DA1 family
-title: Systick periodic interrupt 
+title: Systick periodic interrupt
 has_children: false
 has_toc: false
 ---
@@ -57,6 +57,6 @@ Following table provides the LED name:
 
 | Board      | LED Name |
 | ---------- | ---------------- |
-| [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) |SW0 |
-| [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) |SW0 |
+| [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) |LED0 |
+| [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) |LED0 |
 |||
