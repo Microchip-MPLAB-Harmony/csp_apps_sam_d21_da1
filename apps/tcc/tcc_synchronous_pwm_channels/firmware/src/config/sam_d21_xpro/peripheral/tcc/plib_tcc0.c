@@ -51,28 +51,28 @@
 
 /*  This section lists the other files that are included in this file.
 */
-
+#include "interrupts.h"
 #include "plib_tcc0.h"
 
 
 /* Object to hold callback function and context */
-TCC_CALLBACK_OBJECT TCC0_CallbackObj;
+static TCC_CALLBACK_OBJECT TCC0_CallbackObj;
 
 /* Initialize TCC module */
 void TCC0_PWMInitialize(void)
 {
     /* Reset TCC */
     TCC0_REGS->TCC_CTRLA = TCC_CTRLA_SWRST_Msk;
-    while (TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_SWRST_Msk))
+    while ((TCC0_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_SWRST_Msk) != 0U)
     {
         /* Wait for sync */
     }
     /* Clock prescaler */
     TCC0_REGS->TCC_CTRLA = TCC_CTRLA_PRESCALER_DIV1 ;
-    TCC0_REGS->TCC_WEXCTRL = TCC_WEXCTRL_OTMX(0U);
+    TCC0_REGS->TCC_WEXCTRL = TCC_WEXCTRL_OTMX(0UL);
     /* Dead time configurations */
     TCC0_REGS->TCC_WEXCTRL |= TCC_WEXCTRL_DTIEN0_Msk | TCC_WEXCTRL_DTIEN1_Msk | TCC_WEXCTRL_DTIEN2_Msk | TCC_WEXCTRL_DTIEN3_Msk
- 	 	 | TCC_WEXCTRL_DTLS(64U) | TCC_WEXCTRL_DTHS(64U);
+ 	 	 | TCC_WEXCTRL_DTLS(64UL) | TCC_WEXCTRL_DTHS(64UL);
 
     TCC0_REGS->TCC_WAVE = TCC_WAVE_WAVEGEN_DSBOTTOM;
 
@@ -83,9 +83,10 @@ void TCC0_PWMInitialize(void)
     TCC0_REGS->TCC_CC[3] = 0U;
     TCC0_REGS->TCC_PER = 2399U;
 
+
     TCC0_REGS->TCC_INTENSET = TCC_INTENSET_OVF_Msk;
 
-    while (TCC0_REGS->TCC_SYNCBUSY)
+    while (TCC0_REGS->TCC_SYNCBUSY != 0U)
     {
         /* Wait for sync */
     }
@@ -96,7 +97,7 @@ void TCC0_PWMInitialize(void)
 void TCC0_PWMStart(void)
 {
     TCC0_REGS->TCC_CTRLA |= TCC_CTRLA_ENABLE_Msk;
-    while (TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_ENABLE_Msk))
+    while ((TCC0_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_ENABLE_Msk) != 0U)
     {
         /* Wait for sync */
     }
@@ -106,53 +107,59 @@ void TCC0_PWMStart(void)
 void TCC0_PWMStop (void)
 {
     TCC0_REGS->TCC_CTRLA &= ~TCC_CTRLA_ENABLE_Msk;
-    while (TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_ENABLE_Msk))
+    while ((TCC0_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_ENABLE_Msk) != 0U)
     {
         /* Wait for sync */
     }
 }
 
 /* Configure PWM period */
-void TCC0_PWM24bitPeriodSet (uint32_t period)
+bool TCC0_PWM24bitPeriodSet (uint32_t period)
 {
-    TCC0_REGS->TCC_PERB = period & 0xFFFFFF;
-    while ((TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_PER_Msk)) == TCC_SYNCBUSY_PER_Msk)
+    bool status = false;
+    if ((TCC0_REGS->TCC_STATUS & (TCC_STATUS_PERBV_Msk)) == 0U)
     {
-        /* Wait for sync */
-    }
+        TCC0_REGS->TCC_PERB = period & 0xFFFFFFU;
+        status = true;
+    }    
+    return status;
 }
+
 
 /* Read TCC period */
 uint32_t TCC0_PWM24bitPeriodGet (void)
 {
-    while (TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_PER_Msk))
+    while ((TCC0_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_PER_Msk) != 0U)
     {
         /* Wait for sync */
     }
-    return (TCC0_REGS->TCC_PER & 0xFFFFFF);
+    return (TCC0_REGS->TCC_PER & 0xFFFFFFU);
 }
 
 /* Configure dead time */
 void TCC0_PWMDeadTimeSet (uint8_t deadtime_high, uint8_t deadtime_low)
 {
     TCC0_REGS->TCC_WEXCTRL &= ~(TCC_WEXCTRL_DTHS_Msk | TCC_WEXCTRL_DTLS_Msk);
-    TCC0_REGS->TCC_WEXCTRL |= TCC_WEXCTRL_DTHS(deadtime_high) | TCC_WEXCTRL_DTLS(deadtime_low);
+    TCC0_REGS->TCC_WEXCTRL |= TCC_WEXCTRL_DTHS((uint32_t)deadtime_high) | TCC_WEXCTRL_DTLS((uint32_t)deadtime_low);
 }
 
-void TCC0_PWMPatternSet(uint8_t pattern_enable, uint8_t pattern_output)
+bool TCC0_PWMPatternSet(uint8_t pattern_enable, uint8_t pattern_output)
 {
-    TCC0_REGS->TCC_PATTB = (uint16_t)(pattern_enable | (pattern_output << 8));
-    while ((TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_PATT_Msk)) == TCC_SYNCBUSY_PATT_Msk)
+    bool status = false;
+    if ((TCC0_REGS->TCC_STATUS & (TCC_STATUS_PATTBV_Msk)) == 0U)
     {
-        /* Wait for sync */
-    }
+        TCC0_REGS->TCC_PATTB = (uint16_t)(pattern_enable | ((uint32_t)pattern_output << 8U));
+        status = true;
+    }   
+    return status; 
 }
+
 
 /* Set the counter*/
-void TCC0_PWM24bitCounterSet (uint32_t count_value)
+void TCC0_PWM24bitCounterSet (uint32_t count)
 {
-    TCC0_REGS->TCC_COUNT = count_value & 0xFFFFFF;
-    while (TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_COUNT_Msk))
+    TCC0_REGS->TCC_COUNT = count & 0xFFFFFFU;
+    while ((TCC0_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_COUNT_Msk) != 0U)
     {
         /* Wait for sync */
     }
@@ -161,8 +168,8 @@ void TCC0_PWM24bitCounterSet (uint32_t count_value)
 /* Enable forced synchronous update */
 void TCC0_PWMForceUpdate(void)
 {
-    TCC0_REGS->TCC_CTRLBSET |= TCC_CTRLBCLR_CMD_UPDATE;
-    while (TCC0_REGS->TCC_SYNCBUSY & (TCC_SYNCBUSY_CTRLB_Msk))
+    TCC0_REGS->TCC_CTRLBSET |= (uint8_t)TCC_CTRLBCLR_CMD_UPDATE;
+    while ((TCC0_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_CTRLB_Msk) != 0U)
     {
         /* Wait for sync */
     }

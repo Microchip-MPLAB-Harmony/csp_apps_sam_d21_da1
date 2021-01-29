@@ -670,6 +670,8 @@
 #define RTC_MODE1_PER_REG_OFST         (0x14)              /**< (RTC_MODE1_PER) MODE1 Counter Period Offset */
 #define RTC_MODE0_COMP_REG_OFST        (0x18)              /**< (RTC_MODE0_COMP) MODE0 Compare n Value Offset */
 #define RTC_MODE1_COMP_REG_OFST        (0x18)              /**< (RTC_MODE1_COMP) MODE1 Compare n Value Offset */
+#define RTC_MODE1_COMP0_REG_OFST       (0x18)              /**< (RTC_MODE1_COMP0) MODE1 Compare n Value Offset */
+#define RTC_MODE1_COMP1_REG_OFST       (0x1A)              /**< (RTC_MODE1_COMP1) MODE1 Compare n Value Offset */
 #define RTC_MODE2_ALARM_REG_OFST       (0x18)              /**< (RTC_MODE2_ALARM) MODE2_ALARM Alarm n Value Offset */
 #define RTC_MODE2_MASK_REG_OFST        (0x1C)              /**< (RTC_MODE2_MASK) MODE2_ALARM Alarm n Mask Offset */
 
