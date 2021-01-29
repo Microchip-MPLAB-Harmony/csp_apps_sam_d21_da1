@@ -1,0 +1,13 @@
+configName: sam_da1_xpro
+folderName: ''
+format_version: v1.0
+frameworkPath: ../../../..
+processor: ATSAMDA1J16B
+projectName: ''
+settings:
+  PackageFilter: csp;
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.5.1
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\SAMDA1_DFP\2.0.17\samda1b\atdf\ATSAMDA1J16B.atdf
