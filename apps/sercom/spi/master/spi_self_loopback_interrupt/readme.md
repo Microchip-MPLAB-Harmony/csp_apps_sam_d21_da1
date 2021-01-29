@@ -1,6 +1,6 @@
 ---
 parent: Harmony 3 peripheral library application examples for SAM D21/DA1 family
-title: SERCOM SPI interrupt 
+title: SERCOM SPI interrupt
 has_children: false
 has_toc: false
 ---
@@ -43,6 +43,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro)
 
+- Use a jumper wire to short pin 16 and pin 17 of the EXT2 header
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ### Setting up [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO)
