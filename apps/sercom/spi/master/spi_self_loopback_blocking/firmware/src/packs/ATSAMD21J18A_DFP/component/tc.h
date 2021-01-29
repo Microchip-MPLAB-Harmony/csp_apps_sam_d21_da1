@@ -387,8 +387,14 @@
 #define TC_COUNT32_COUNT_REG_OFST      (0x10)              /**< (TC_COUNT32_COUNT) COUNT32 Counter Value Offset */
 #define TC_COUNT8_PER_REG_OFST         (0x14)              /**< (TC_COUNT8_PER) COUNT8 Period Value Offset */
 #define TC_COUNT8_CC_REG_OFST          (0x18)              /**< (TC_COUNT8_CC) COUNT8 Compare/Capture Offset */
+#define TC_COUNT8_CC0_REG_OFST         (0x18)              /**< (TC_COUNT8_CC0) COUNT8 Compare/Capture Offset */
+#define TC_COUNT8_CC1_REG_OFST         (0x19)              /**< (TC_COUNT8_CC1) COUNT8 Compare/Capture Offset */
 #define TC_COUNT16_CC_REG_OFST         (0x18)              /**< (TC_COUNT16_CC) COUNT16 Compare/Capture Offset */
+#define TC_COUNT16_CC0_REG_OFST        (0x18)              /**< (TC_COUNT16_CC0) COUNT16 Compare/Capture Offset */
+#define TC_COUNT16_CC1_REG_OFST        (0x1A)              /**< (TC_COUNT16_CC1) COUNT16 Compare/Capture Offset */
 #define TC_COUNT32_CC_REG_OFST         (0x18)              /**< (TC_COUNT32_CC) COUNT32 Compare/Capture Offset */
+#define TC_COUNT32_CC0_REG_OFST        (0x18)              /**< (TC_COUNT32_CC0) COUNT32 Compare/Capture Offset */
+#define TC_COUNT32_CC1_REG_OFST        (0x1C)              /**< (TC_COUNT32_CC1) COUNT32 Compare/Capture Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TC register API structure */
