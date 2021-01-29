@@ -528,6 +528,8 @@
 #define EIC_INTFLAG_REG_OFST           (0x10)              /**< (EIC_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define EIC_WAKEUP_REG_OFST            (0x14)              /**< (EIC_WAKEUP) Wake-Up Enable Offset */
 #define EIC_CONFIG_REG_OFST            (0x18)              /**< (EIC_CONFIG) Configuration n Offset */
+#define EIC_CONFIG0_REG_OFST           (0x18)              /**< (EIC_CONFIG0) Configuration n Offset */
+#define EIC_CONFIG1_REG_OFST           (0x1C)              /**< (EIC_CONFIG1) Configuration n Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief EIC register API structure */

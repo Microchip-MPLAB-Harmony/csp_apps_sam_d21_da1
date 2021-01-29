@@ -47,6 +47,7 @@
 // *****************************************************************************
 
 #include "plib_wdt.h"
+#include "interrupts.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -74,12 +75,22 @@ void WDT_Enable( void )
     }
 }
 
+/* This function is used to disable the Watchdog Timer */
 void WDT_Disable( void )
 {
+    /* Wait for synchronization */
+    while(WDT_REGS->WDT_STATUS);
+
     /* Disable Watchdog Timer */
     WDT_REGS->WDT_CTRL &= ~(WDT_CTRL_ENABLE_Msk);
+
+    /* Wait for synchronization */
+    while(WDT_REGS->WDT_STATUS);
 }
 
+/* If application intends to stay in active mode after clearing WDT, then use WDT_Clear API to clear the WDT. This avoids CPU from waiting or stalling for Synchronization.
+ * If application intends to enter low power mode after clearing WDT, then use the WDT_ClearWithSync API to clear the WDT.
+ */
 void WDT_Clear( void )
 {
     if (WDT_REGS->WDT_STATUS == 0)
@@ -88,5 +99,22 @@ void WDT_Clear( void )
         timeout occurs */
         WDT_REGS->WDT_CLEAR = WDT_CLEAR_CLEAR_KEY;
     }
+}
+
+/* This API must be used if application intends to enter low power mode after clearing WDT.
+ * It waits for write synchronization to complete as the device must not enter low power mode
+ * while write sync is in progress.
+ */
+void WDT_ClearWithSync( void )
+{
+    /* Wait for synchronization */
+    while(WDT_REGS->WDT_STATUS);
+
+    /* Clear WDT and reset the WDT timer before the
+    timeout occurs */
+    WDT_REGS->WDT_CLEAR = WDT_CLEAR_CLEAR_KEY;
+
+    /* Wait for synchronization */
+    while(WDT_REGS->WDT_STATUS);
 }
 
