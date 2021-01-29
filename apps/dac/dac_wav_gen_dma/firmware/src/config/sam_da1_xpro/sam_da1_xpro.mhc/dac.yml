@@ -1,0 +1,36 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: dac}
+children:
+- type: Symbols
+  children:
+  - type: Boolean
+    attributes: {id: DAC_BUFFER_EMPTY_EVENT_OUTPUT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'false'}
+  - type: Hex
+    attributes: {id: DAC_EVCTRL}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: dac, value: '1'}
+  - type: KeyValueSet
+    attributes: {id: DAC_OUTPUT_MODE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: dac, value: '2'}
+  - type: Boolean
+    attributes: {id: DAC_START_CONVERSION_EVENT_INPUT}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+- type: ElementPosition
+  attributes: {x: '20', y: '66', id: dac}
