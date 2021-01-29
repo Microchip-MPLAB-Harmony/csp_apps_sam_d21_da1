@@ -7,25 +7,25 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_da1_xpro" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f7" displayName="dmac" projectFiles="true">
+            <logicalFolder name="f2" displayName="dmac" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/dmac/plib_dmac.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvic/plib_nvic.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvmctrl/plib_nvmctrl.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f7" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/sam_da1_xpro/peripheral/sercom/spi_master/plib_sercom1_spi_master.h</itemPath>
                 <itemPath>../src/config/sam_da1_xpro/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h</itemPath>
@@ -67,10 +67,48 @@
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/component/wdt.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="instance" projectFiles="true">
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/ac.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/adc.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/dac.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/dmac.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/dsu.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/eic.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/evsys.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/gclk.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/i2s.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/mtb.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/nvmctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/pac0.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/pac1.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/pac2.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/pm.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/port.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/ptc.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sbmatrix.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sercom0.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sercom1.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sercom2.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sercom3.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sercom4.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sercom5.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/sysctrl.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tc3.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tc4.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tc5.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tc6.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tc7.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tcc0.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tcc1.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/tcc2.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/usb.h</itemPath>
+            <itemPath>../src/packs/ATSAMDA1J16B_DFP/instance/wdt.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMDA1J16B_DFP/pio/samda1j16b.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/ATSAMDA1J16B_DFP/atsamda1j16b.h</itemPath>
+          <itemPath>../src/packs/ATSAMDA1J16B_DFP/samda1j16b.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="CMSIS" projectFiles="true">
           <logicalFolder name="f1" displayName="CMSIS" projectFiles="true">
@@ -124,25 +162,25 @@
       <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="sam_da1_xpro" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f5" displayName="clock" projectFiles="true">
+            <logicalFolder name="f1" displayName="clock" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f7" displayName="dmac" projectFiles="true">
+            <logicalFolder name="f2" displayName="dmac" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/dmac/plib_dmac.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f6" displayName="nvic" projectFiles="true">
+            <logicalFolder name="f4" displayName="nvic" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvic/plib_nvic.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="nvmctrl" projectFiles="true">
+            <logicalFolder name="f5" displayName="nvmctrl" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/nvmctrl/plib_nvmctrl.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="port" projectFiles="true">
+            <logicalFolder name="f6" displayName="port" projectFiles="true">
               <itemPath>../src/config/sam_da1_xpro/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="sercom" projectFiles="true">
+            <logicalFolder name="f7" displayName="sercom" projectFiles="true">
               <logicalFolder name="f1" displayName="spi_master" projectFiles="true">
                 <itemPath>../src/config/sam_da1_xpro/peripheral/sercom/spi_master/plib_sercom1_spi_master.c</itemPath>
               </logicalFolder>
@@ -174,12 +212,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAMDA1_DFP" vendor="Microchip" version="2.3.56"/>
+        <pack name="SAMDA1_DFP" vendor="Microchip" version="2.4.65"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -241,7 +279,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_da1_xpro;../src/packs/ATSAMDA1J16B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_da1_xpro;../src/packs/ATSAMDA1J16B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -338,7 +376,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/sam_da1_xpro;../src/packs/ATSAMDA1J16B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
+                  value="../src;../src/config/sam_da1_xpro;../src/packs/ATSAMDA1J16B_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -370,6 +408,8 @@
       </C32Global>
       <EdbgTool>
         <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="arm.use_vtor" value="false"/>
+        <property key="arm.vtor_adr" value="exception_table"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value="swd"/>
         <property key="communication.speed" value="2.000"/>
@@ -379,6 +419,8 @@
         <property key="firmware.toolpack"
                   value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
+        <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -392,6 +434,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
@@ -403,11 +446,16 @@
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
+        <property key="script.has_reset" value="true"/>
+        <property key="script.log_level" value="1"/>
+        <property key="script.reset_delay" value="0"/>
+        <property key="script.show_output" value="false"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
+        <property key="x.erase.clearprot" value="true"/>
       </EdbgTool>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>

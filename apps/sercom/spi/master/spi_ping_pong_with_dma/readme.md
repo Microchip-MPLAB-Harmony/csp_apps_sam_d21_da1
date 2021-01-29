@@ -26,7 +26,7 @@ transmitted will also be received.
 
 To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1) and click
 
-![clone](../../../../docs/images/clone.png)
+![clone](../../../../../docs/images/clone.png)
 
 Path of the application within the repository is **apps/sercom/spi/spi_ping_pong_with_dma/firmware** .
 
