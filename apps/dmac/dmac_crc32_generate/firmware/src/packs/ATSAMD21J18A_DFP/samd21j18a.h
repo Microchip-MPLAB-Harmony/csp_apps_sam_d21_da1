@@ -30,12 +30,12 @@
 #define HEADER_FORMAT_VERSION_MAJOR (2)
 #define HEADER_FORMAT_VERSION_MINOR (0)
 
-/** \addtogroup SAMD21J18A_definitions b'SAMD21J18A definitions
+/** \addtogroup SAMD21J18A_definitions SAMD21J18A definitions
   This file defines all structures and symbols for SAMD21J18A:
     - registers and bitfields
     - peripheral base address
     - peripheral ID
-    - PIO definitions'
+    - PIO definitions
  *  @{
  */
 
@@ -65,7 +65,7 @@
 #  define _UL_(x) x   /**< Assembler: Unsigned Long integer literal constant value */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 #endif /* SKIP_INTEGER_LITERALS */
-/** @}  b'end of Atmel Global Defines' */
+/** @}  end of Atmel Global Defines */
 
 /* ************************************************************************** */
 /*   CMSIS DEFINITIONS FOR SAMD21J18A                                         */
@@ -231,7 +231,7 @@ void I2S_Handler                   ( void );
 #include "system_samd21.h"
 #endif /* USE_CMSIS_INIT */
 
-/** \defgroup SAMD21J18A_api b'Peripheral Software API'
+/** \defgroup SAMD21J18A_api Peripheral Software API
  *  @{
  */
 
@@ -261,9 +261,49 @@ void I2S_Handler                   ( void );
 #include "component/tcc.h"
 #include "component/usb.h"
 #include "component/wdt.h"
-/** @}  b'end of Peripheral Software API' */
+/** @}  end of Peripheral Software API */
 
-/** \addtogroup SAMD21J18A_id b'Peripheral Ids Definitions'
+/* ************************************************************************** */
+/*   INSTANCE DEFINITIONS FOR SAMD21J18A */
+/* ************************************************************************** */
+#include "instance/ac.h"
+#include "instance/adc.h"
+#include "instance/dac.h"
+#include "instance/dmac.h"
+#include "instance/dsu.h"
+#include "instance/eic.h"
+#include "instance/evsys.h"
+#include "instance/gclk.h"
+#include "instance/i2s.h"
+#include "instance/mtb.h"
+#include "instance/nvmctrl.h"
+#include "instance/pac0.h"
+#include "instance/pac1.h"
+#include "instance/pac2.h"
+#include "instance/pm.h"
+#include "instance/port.h"
+#include "instance/ptc.h"
+#include "instance/rtc.h"
+#include "instance/sbmatrix.h"
+#include "instance/sercom0.h"
+#include "instance/sercom1.h"
+#include "instance/sercom2.h"
+#include "instance/sercom3.h"
+#include "instance/sercom4.h"
+#include "instance/sercom5.h"
+#include "instance/sysctrl.h"
+#include "instance/tc3.h"
+#include "instance/tc4.h"
+#include "instance/tc5.h"
+#include "instance/tc6.h"
+#include "instance/tc7.h"
+#include "instance/tcc0.h"
+#include "instance/tcc1.h"
+#include "instance/tcc2.h"
+#include "instance/usb.h"
+#include "instance/wdt.h"
+
+/** \addtogroup SAMD21J18A_id Peripheral Ids Definitions
  *  @{
  */
 
@@ -308,9 +348,9 @@ void I2S_Handler                   ( void );
 #define ID_I2S           ( 84) /**< \brief Inter-IC Sound Interface (I2S) */
 
 #define ID_PERIPH_MAX    ( 84) /**< \brief Number of peripheral IDs */
-/** @}  b'end of Peripheral Ids Definitions' */
+/** @}  end of Peripheral Ids Definitions */
 
-/** \addtogroup SAMD21J18A_base b'Peripheral Base Address Definitions'
+/** \addtogroup SAMD21J18A_base Peripheral Base Address Definitions
  *  @{
  */
 
@@ -356,55 +396,55 @@ void I2S_Handler                   ( void );
 #define USB_REGS                         ((usb_registers_t*)0x41005000)                /**< \brief USB Registers Address        */
 #define WDT_REGS                         ((wdt_registers_t*)0x40001000)                /**< \brief WDT Registers Address        */
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-/** @}  b'end of Peripheral Base Address Definitions' */
+/** @}  end of Peripheral Base Address Definitions */
 
-/** \addtogroup SAMD21J18A_base b'Peripheral Base Address Definitions'
+/** \addtogroup SAMD21J18A_base Peripheral Base Address Definitions
  *  @{
  */
 
 /* ************************************************************************** */
 /*   BASE ADDRESS DEFINITIONS FOR SAMD21J18A                                  */
 /* ************************************************************************** */
-#define AC_BASE_ADDRESS                  _UL_(0x42004400)                              /**< \brief AC Base Address */
-#define ADC_BASE_ADDRESS                 _UL_(0x42004000)                              /**< \brief ADC Base Address */
-#define DAC_BASE_ADDRESS                 _UL_(0x42004800)                              /**< \brief DAC Base Address */
-#define DMAC_BASE_ADDRESS                _UL_(0x41004800)                              /**< \brief DMAC Base Address */
-#define DSU_BASE_ADDRESS                 _UL_(0x41002000)                              /**< \brief DSU Base Address */
-#define EIC_BASE_ADDRESS                 _UL_(0x40001800)                              /**< \brief EIC Base Address */
-#define EVSYS_BASE_ADDRESS               _UL_(0x42000400)                              /**< \brief EVSYS Base Address */
-#define GCLK_BASE_ADDRESS                _UL_(0x40000c00)                              /**< \brief GCLK Base Address */
-#define SBMATRIX_BASE_ADDRESS            _UL_(0x41007000)                              /**< \brief SBMATRIX Base Address */
-#define I2S_BASE_ADDRESS                 _UL_(0x42005000)                              /**< \brief I2S Base Address */
-#define MTB_BASE_ADDRESS                 _UL_(0x41006000)                              /**< \brief MTB Base Address */
-#define NVMCTRL_BASE_ADDRESS             _UL_(0x41004000)                              /**< \brief NVMCTRL Base Address */
-#define PAC0_BASE_ADDRESS                _UL_(0x40000000)                              /**< \brief PAC0 Base Address */
-#define PAC1_BASE_ADDRESS                _UL_(0x41000000)                              /**< \brief PAC1 Base Address */
-#define PAC2_BASE_ADDRESS                _UL_(0x42000000)                              /**< \brief PAC2 Base Address */
-#define PM_BASE_ADDRESS                  _UL_(0x40000400)                              /**< \brief PM Base Address */
-#define PORT_BASE_ADDRESS                _UL_(0x41004400)                              /**< \brief PORT Base Address */
-#define PORT_IOBUS_BASE_ADDRESS          _UL_(0x60000000)                              /**< \brief PORT Base Address */
-#define PTC_BASE_ADDRESS                 _UL_(0x42004c00)                              /**< \brief PTC Base Address */
-#define RTC_BASE_ADDRESS                 _UL_(0x40001400)                              /**< \brief RTC Base Address */
-#define SERCOM0_BASE_ADDRESS             _UL_(0x42000800)                              /**< \brief SERCOM0 Base Address */
-#define SERCOM1_BASE_ADDRESS             _UL_(0x42000c00)                              /**< \brief SERCOM1 Base Address */
-#define SERCOM2_BASE_ADDRESS             _UL_(0x42001000)                              /**< \brief SERCOM2 Base Address */
-#define SERCOM3_BASE_ADDRESS             _UL_(0x42001400)                              /**< \brief SERCOM3 Base Address */
-#define SERCOM4_BASE_ADDRESS             _UL_(0x42001800)                              /**< \brief SERCOM4 Base Address */
-#define SERCOM5_BASE_ADDRESS             _UL_(0x42001c00)                              /**< \brief SERCOM5 Base Address */
-#define SYSCTRL_BASE_ADDRESS             _UL_(0x40000800)                              /**< \brief SYSCTRL Base Address */
-#define TC3_BASE_ADDRESS                 _UL_(0x42002c00)                              /**< \brief TC3 Base Address */
-#define TC4_BASE_ADDRESS                 _UL_(0x42003000)                              /**< \brief TC4 Base Address */
-#define TC5_BASE_ADDRESS                 _UL_(0x42003400)                              /**< \brief TC5 Base Address */
-#define TC6_BASE_ADDRESS                 _UL_(0x42003800)                              /**< \brief TC6 Base Address */
-#define TC7_BASE_ADDRESS                 _UL_(0x42003c00)                              /**< \brief TC7 Base Address */
-#define TCC0_BASE_ADDRESS                _UL_(0x42002000)                              /**< \brief TCC0 Base Address */
-#define TCC1_BASE_ADDRESS                _UL_(0x42002400)                              /**< \brief TCC1 Base Address */
-#define TCC2_BASE_ADDRESS                _UL_(0x42002800)                              /**< \brief TCC2 Base Address */
-#define USB_BASE_ADDRESS                 _UL_(0x41005000)                              /**< \brief USB Base Address */
-#define WDT_BASE_ADDRESS                 _UL_(0x40001000)                              /**< \brief WDT Base Address */
-/** @}  b'end of Peripheral Base Address Definitions' */
+#define AC_BASE_ADDRESS                  _UL_(0x42004400)                              /* AC Base Address */
+#define ADC_BASE_ADDRESS                 _UL_(0x42004000)                              /* ADC Base Address */
+#define DAC_BASE_ADDRESS                 _UL_(0x42004800)                              /* DAC Base Address */
+#define DMAC_BASE_ADDRESS                _UL_(0x41004800)                              /* DMAC Base Address */
+#define DSU_BASE_ADDRESS                 _UL_(0x41002000)                              /* DSU Base Address */
+#define EIC_BASE_ADDRESS                 _UL_(0x40001800)                              /* EIC Base Address */
+#define EVSYS_BASE_ADDRESS               _UL_(0x42000400)                              /* EVSYS Base Address */
+#define GCLK_BASE_ADDRESS                _UL_(0x40000c00)                              /* GCLK Base Address */
+#define SBMATRIX_BASE_ADDRESS            _UL_(0x41007000)                              /* SBMATRIX Base Address */
+#define I2S_BASE_ADDRESS                 _UL_(0x42005000)                              /* I2S Base Address */
+#define MTB_BASE_ADDRESS                 _UL_(0x41006000)                              /* MTB Base Address */
+#define NVMCTRL_BASE_ADDRESS             _UL_(0x41004000)                              /* NVMCTRL Base Address */
+#define PAC0_BASE_ADDRESS                _UL_(0x40000000)                              /* PAC0 Base Address */
+#define PAC1_BASE_ADDRESS                _UL_(0x41000000)                              /* PAC1 Base Address */
+#define PAC2_BASE_ADDRESS                _UL_(0x42000000)                              /* PAC2 Base Address */
+#define PM_BASE_ADDRESS                  _UL_(0x40000400)                              /* PM Base Address */
+#define PORT_BASE_ADDRESS                _UL_(0x41004400)                              /* PORT Base Address */
+#define PORT_IOBUS_BASE_ADDRESS          _UL_(0x60000000)                              /* PORT Base Address */
+#define PTC_BASE_ADDRESS                 _UL_(0x42004c00)                              /* PTC Base Address */
+#define RTC_BASE_ADDRESS                 _UL_(0x40001400)                              /* RTC Base Address */
+#define SERCOM0_BASE_ADDRESS             _UL_(0x42000800)                              /* SERCOM0 Base Address */
+#define SERCOM1_BASE_ADDRESS             _UL_(0x42000c00)                              /* SERCOM1 Base Address */
+#define SERCOM2_BASE_ADDRESS             _UL_(0x42001000)                              /* SERCOM2 Base Address */
+#define SERCOM3_BASE_ADDRESS             _UL_(0x42001400)                              /* SERCOM3 Base Address */
+#define SERCOM4_BASE_ADDRESS             _UL_(0x42001800)                              /* SERCOM4 Base Address */
+#define SERCOM5_BASE_ADDRESS             _UL_(0x42001c00)                              /* SERCOM5 Base Address */
+#define SYSCTRL_BASE_ADDRESS             _UL_(0x40000800)                              /* SYSCTRL Base Address */
+#define TC3_BASE_ADDRESS                 _UL_(0x42002c00)                              /* TC3 Base Address */
+#define TC4_BASE_ADDRESS                 _UL_(0x42003000)                              /* TC4 Base Address */
+#define TC5_BASE_ADDRESS                 _UL_(0x42003400)                              /* TC5 Base Address */
+#define TC6_BASE_ADDRESS                 _UL_(0x42003800)                              /* TC6 Base Address */
+#define TC7_BASE_ADDRESS                 _UL_(0x42003c00)                              /* TC7 Base Address */
+#define TCC0_BASE_ADDRESS                _UL_(0x42002000)                              /* TCC0 Base Address */
+#define TCC1_BASE_ADDRESS                _UL_(0x42002400)                              /* TCC1 Base Address */
+#define TCC2_BASE_ADDRESS                _UL_(0x42002800)                              /* TCC2 Base Address */
+#define USB_BASE_ADDRESS                 _UL_(0x41005000)                              /* USB Base Address */
+#define WDT_BASE_ADDRESS                 _UL_(0x40001000)                              /* WDT Base Address */
+/** @}  end of Peripheral Base Address Definitions */
 
-/** \addtogroup SAMD21J18A_pio b'Peripheral Pio Definitions'
+/** \addtogroup SAMD21J18A_pio Peripheral Pio Definitions
  *  @{
  */
 
@@ -412,7 +452,7 @@ void I2S_Handler                   ( void );
 /*   PIO DEFINITIONS FOR SAMD21J18A                                           */
 /* ************************************************************************** */
 #include "pio/samd21j18a.h"
-/** @}  b'end of Peripheral Pio Definitions' */
+/** @}  end of Peripheral Pio Definitions */
 
 /* ************************************************************************** */
 /*   MEMORY MAPPING DEFINITIONS FOR SAMD21J18A                                */
@@ -584,7 +624,7 @@ void I2S_Handler                   ( void );
 }
 #endif
 
-/** @}  b'end of SAMD21J18A definitions' */
+/** @}  end of SAMD21J18A definitions */
 
 
 #endif /* _SAMD21J18A_H_ */
