@@ -258,1071 +258,1119 @@ var myVariable = `
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dac/dac_wav_gen_dma/readme.html",
     "relUrl": "/apps/dac/dac_wav_gen_dma/readme.html"
   },"43": {
+    "doc": "DMAC CRC-32 Generation",
+    "title": "DMAC CRC-32 Generation",
+    "content": "This example application demonstrates how to use the DMAC peripheral to compute 32-bit Cyclic Redundancy Checksum (CRC). ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html#dmac-crc-32-generation",
+    "relUrl": "/apps/dmac/dmac_crc32_generate/readme.html#dmac-crc-32-generation"
+  },"44": {
+    "doc": "DMAC CRC-32 Generation",
+    "title": "Description",
+    "content": "The DMAC unit provides support for calculating a CRC-16 and CRC-32 value for data passing through any DMA channel or using an IO interface. This example application computes the 32-bit CRC value for the poynomial (0x04C11DB7) using below two data sources for the CRC engine in DMAC peripheral . | It uses a DMA Channel with software trigger to initiate a memory-memory transfer from the source buffer to the destination buffer with 8-bit beat size. Once the transfer is completed a 32-bit CRC will be generated for the source buffer. | It uses the IO mode to generate a 32-bit CRC value for the source buffer. | . Once the hardware CRC are generated using above two methods they are validated using a software-calculated CRC value. ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html#description",
+    "relUrl": "/apps/dmac/dmac_crc32_generate/readme.html#description"
+  },"45": {
+    "doc": "DMAC CRC-32 Generation",
+    "title": "Downloading and building the application",
+    "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/dmac/dmac_crc32_generate/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . |   |   | . ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html#downloading-and-building-the-application",
+    "relUrl": "/apps/dmac/dmac_crc32_generate/readme.html#downloading-and-building-the-application"
+  },"46": {
+    "doc": "DMAC CRC-32 Generation",
+    "title": "Setting up the hardware",
+    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html#setting-up-the-hardware",
+    "relUrl": "/apps/dmac/dmac_crc32_generate/readme.html#setting-up-the-hardware"
+  },"47": {
+    "doc": "DMAC CRC-32 Generation",
+    "title": "Running the Application",
+    "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | LED indicates the success or failure: . | LED is turned ON when the DMAC memory transfer is successful and hardware CRC values matched with the software calculated CRC value | Following table provides the LED name | . | Board Name | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | Observe output message in console as follows: . | Expected CRC Value for the polynomial (0x04C11DB7) is (0xcbf43926) | . | . ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html#running-the-application",
+    "relUrl": "/apps/dmac/dmac_crc32_generate/readme.html#running-the-application"
+  },"48": {
+    "doc": "DMAC CRC-32 Generation",
+    "title": "DMAC CRC-32 Generation",
+    "content": ". ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html",
+    "relUrl": "/apps/dmac/dmac_crc32_generate/readme.html"
+  },"49": {
     "doc": "DMAC memory transfer",
     "title": "DMAC memory transfer",
     "content": "This example application demonstrates how to use the DMAC peripheral to do a memory to memory transfer. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html#dmac-memory-transfer",
     "relUrl": "/apps/dmac/dmac_memory_transfer/readme.html#dmac-memory-transfer"
-  },"44": {
+  },"50": {
     "doc": "DMAC memory transfer",
     "title": "Description",
     "content": "The application uses a software trigger to initiate a memory-memory transfer from the source buffer to the destination buffer with 16-bit beat size and 32-bit beat size. The number of cycles taken for the DMA transfer is measured using the System timer (SysTick) and reported on the console. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html#description",
     "relUrl": "/apps/dmac/dmac_memory_transfer/readme.html#description"
-  },"45": {
+  },"51": {
     "doc": "DMAC memory transfer",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/dmac/dmac_memory_transfer/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/dmac/dmac_memory_transfer/readme.html#downloading-and-building-the-application"
-  },"46": {
+  },"52": {
     "doc": "DMAC memory transfer",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/dmac/dmac_memory_transfer/readme.html#setting-up-the-hardware"
-  },"47": {
+  },"53": {
     "doc": "DMAC memory transfer",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | LED indicates the success or failure: . | LED is turned ON when the DMAC memory transfer is successful. | Following table provides the LED name | . | Board Name | LED Name | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . | Observe output message in console as follows: . NOTE: The number of transfer cycles may vary . | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html#running-the-application",
     "relUrl": "/apps/dmac/dmac_memory_transfer/readme.html#running-the-application"
-  },"48": {
+  },"54": {
     "doc": "DMAC memory transfer",
     "title": "DMAC memory transfer",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html",
     "relUrl": "/apps/dmac/dmac_memory_transfer/readme.html"
-  },"49": {
+  },"55": {
     "doc": "DMAC USART echo",
     "title": "DMAC USART echo",
     "content": "This example application demonstrates USART transfer with DMA to receive 10 bytes and echo back the received bytes. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html#dmac-usart-echo",
     "relUrl": "/apps/dmac/dmac_usart_echo/readme.html#dmac-usart-echo"
-  },"50": {
+  },"56": {
     "doc": "DMAC USART echo",
     "title": "Description",
     "content": "This application demonstrates USART transfer with DMA using SERCOM peripheral configured in USART mode. One DMA channel is used to receive 10 bytes of data from the USART and another DMA channel is used to echo back the received bytes. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html#description",
     "relUrl": "/apps/dmac/dmac_usart_echo/readme.html#description"
-  },"51": {
+  },"57": {
     "doc": "DMAC USART echo",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/dmac/dmac_usart_echo/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/dmac/dmac_usart_echo/readme.html#downloading-and-building-the-application"
-  },"52": {
+  },"58": {
     "doc": "DMAC USART echo",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/dmac/dmac_usart_echo/readme.html#setting-up-the-hardware"
-  },"53": {
+  },"59": {
     "doc": "DMAC USART echo",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | The console displays the following message . | Type 10 characters in the console | Entered 10 characters will be echoed back and the LED is toggled | The following table provides the LED names | . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html#running-the-application",
     "relUrl": "/apps/dmac/dmac_usart_echo/readme.html#running-the-application"
-  },"54": {
+  },"60": {
     "doc": "DMAC USART echo",
     "title": "DMAC USART echo",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html",
     "relUrl": "/apps/dmac/dmac_usart_echo/readme.html"
-  },"55": {
+  },"61": {
     "doc": "DSU compute CRC32",
     "title": "DSU compute CRC32",
     "content": "This example application demonstrates how to use the DSU Peripheral library to compute 32-bit Cyclic Redundancy Checksum (CRC). ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html#dsu-compute-crc32",
     "relUrl": "/apps/dsu/dsu_crc32_generate/readme.html#dsu-compute-crc32"
-  },"56": {
+  },"62": {
     "doc": "DSU compute CRC32",
     "title": "Description",
     "content": "The DSU unit provides support for calculating a 32-bit CRC value for a memory area. This example application computes the 32-bit hardware CRC value using the DSU Peripheral and validates it using a software-calculated CRC value. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html#description",
     "relUrl": "/apps/dsu/dsu_crc32_generate/readme.html#description"
-  },"57": {
+  },"63": {
     "doc": "DSU compute CRC32",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/dsu/dsu_crc32_generate/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/dsu/dsu_crc32_generate/readme.html#downloading-and-building-the-application"
-  },"58": {
+  },"64": {
     "doc": "DSU compute CRC32",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/dsu/dsu_crc32_generate/readme.html#setting-up-the-hardware"
-  },"59": {
+  },"65": {
     "doc": "DSU compute CRC32",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | The LED indicates the success or failure: . | LED is turned ON when the hardware CRC value matched with the software calculated CRC value | LED is turned OFF when the hardware CRC value did not match with the software calculated CRC value | . | . The following table provides the LED name . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html#running-the-application",
     "relUrl": "/apps/dsu/dsu_crc32_generate/readme.html#running-the-application"
-  },"60": {
+  },"66": {
     "doc": "DSU compute CRC32",
     "title": "DSU compute CRC32",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html",
     "relUrl": "/apps/dsu/dsu_crc32_generate/readme.html"
-  },"61": {
+  },"67": {
     "doc": "EIC Interrupt",
     "title": "EIC Interrupt",
     "content": "This example application demonstrates how to generate interrupt using the EIC on switch press and indicate it through an LED. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html#eic-interrupt",
     "relUrl": "/apps/eic/eic_led_on_off/readme.html#eic-interrupt"
-  },"62": {
+  },"68": {
     "doc": "EIC Interrupt",
     "title": "Description",
     "content": "The application registers an event callback with EIC Peripheral library and toggles an LED for every switch press event. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html#description",
     "relUrl": "/apps/eic/eic_led_on_off/readme.html#description"
-  },"63": {
+  },"69": {
     "doc": "EIC Interrupt",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/eic/eic_led_on_off/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/eic/eic_led_on_off/readme.html#downloading-and-building-the-application"
-  },"64": {
+  },"70": {
     "doc": "EIC Interrupt",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/eic/eic_led_on_off/readme.html#setting-up-the-hardware"
-  },"65": {
+  },"71": {
     "doc": "EIC Interrupt",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | LED toggles on every switch release | . Following table provides the LED name: . | Board | Switch Name | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | SW0 | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html#running-the-application",
     "relUrl": "/apps/eic/eic_led_on_off/readme.html#running-the-application"
-  },"66": {
+  },"72": {
     "doc": "EIC Interrupt",
     "title": "EIC Interrupt",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html",
     "relUrl": "/apps/eic/eic_led_on_off/readme.html"
-  },"67": {
+  },"73": {
     "doc": "NVMCTRL read write",
     "title": "NVMCTRL read write",
     "content": "This example application demonstrates how to use the NVMCTRL to erase and program the internal Flash memory. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#nvmctrl-read-write",
     "relUrl": "/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#nvmctrl-read-write"
-  },"68": {
+  },"74": {
     "doc": "NVMCTRL read write",
     "title": "Description",
     "content": "This example uses the NVMCTRL peripheral library to erase a row and write an array of values to the internal Flash memory. It verifies the value written by reading the values back and comparing it to the value written. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#description",
     "relUrl": "/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#description"
-  },"69": {
+  },"75": {
     "doc": "NVMCTRL read write",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/nvmctrl/nvmctrl_flash_read_write/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#downloading-and-building-the-application"
-  },"70": {
+  },"76": {
     "doc": "NVMCTRL read write",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#setting-up-the-hardware"
-  },"71": {
+  },"77": {
     "doc": "NVMCTRL read write",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | The LED indicates the success or failure: . | The LED is turned ON when the value read from the flash memory matched with the written value | The LED is turned OFF when the value read from the flash memory did not match with the written value | . | The following table provides the LED name: | . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#running-the-application",
     "relUrl": "/apps/nvmctrl/nvmctrl_flash_read_write/readme.html#running-the-application"
-  },"72": {
+  },"78": {
     "doc": "NVMCTRL read write",
     "title": "NVMCTRL read write",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html",
     "relUrl": "/apps/nvmctrl/nvmctrl_flash_read_write/readme.html"
-  },"73": {
+  },"79": {
     "doc": "PM reset cause",
     "title": "PM reset cause",
     "content": "This example shows how to use the PM peripheral to indicate the cause of the device reset. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html#pm-reset-cause",
     "relUrl": "/apps/pm/pm_reset_cause/readme.html#pm-reset-cause"
-  },"74": {
+  },"80": {
     "doc": "PM reset cause",
     "title": "Description",
     "content": "The Power Manager (PM) peripheral collects the various reset sources and generates reset for the device and allows the reset source to be identified by the software: . | Power On Reset: The device contains a power-on-reset (POR) detector, which keeps the system reset until power is stable( This eliminates the need for external reset circuitry to guarantee stable operation when powering up the device) | VDDCORE Brown Out Reset: BOD12 will reset the device if a voltage of 1.2 V or below is observed on the I/O pin supplying power to the MCU core (VDDCORE) | VDDANA Brown Out Reset: BOD33 resets the device if the voltage on the VDDANA pin falls below a value configured by the SYSCTRL | Watchdog Reset: The watchdog reset occurs when it times out | System Reset: The System Reset Request is a software reset generated by the CPU when asserting the SYSRESETREQ bit located in the Reset Control register of the CPU | External Reset: A external reset is generated when a low level is detected on the RESET pin | . This example application uses the PM peripheral to indicate the user Reset and the Watchdog reset. The WDT reset is emulated by not feeding the watchdog on switch press. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html#description",
     "relUrl": "/apps/pm/pm_reset_cause/readme.html#description"
-  },"75": {
+  },"81": {
     "doc": "PM reset cause",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/pm/pm_reset_cause/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/pm/pm_reset_cause/readme.html#downloading-and-building-the-application"
-  },"76": {
+  },"82": {
     "doc": "PM reset cause",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/pm/pm_reset_cause/readme.html#setting-up-the-hardware"
-  },"77": {
+  },"83": {
     "doc": "PM reset cause",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | LED is blinked continuously using the SysTick Timer | Console displays the following message: . | Watchdog timer is fed periodically using System Timer (SysTick) to prevent the WDT reset and the LED is toggled . | The following table provides switch and led name: | . | Board | Switch Name | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | SW0 | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . | Press the switch to put the system in deadlock. The LED should stop blinking. The WDT will reset the device in four seconds and the demonstration should restart | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html#running-the-application",
     "relUrl": "/apps/pm/pm_reset_cause/readme.html#running-the-application"
-  },"78": {
+  },"84": {
     "doc": "PM reset cause",
     "title": "PM reset cause",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html",
     "relUrl": "/apps/pm/pm_reset_cause/readme.html"
-  },"79": {
+  },"85": {
     "doc": "PM wakeup using EIC",
     "title": "PM wakeup using EIC",
     "content": "This application demonstrates entering the low power modes and exiting it using the EIC. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html#pm-wakeup-using-eic",
     "relUrl": "/apps/pm/pm_wakeup_eic/readme.html#pm-wakeup-using-eic"
-  },"80": {
+  },"86": {
     "doc": "PM wakeup using EIC",
     "title": "Description",
     "content": "The PM peripheral library is used to enter the low power mode and the device exits low power mode when the button is pressed. To identify a button push, the EIC is configured to detect a falling edge on the GPIO pin connected to the switch. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html#description",
     "relUrl": "/apps/pm/pm_wakeup_eic/readme.html#description"
-  },"81": {
+  },"87": {
     "doc": "PM wakeup using EIC",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/pm/pm_wakeup_eic/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/pm/pm_wakeup_eic/readme.html#downloading-and-building-the-application"
-  },"82": {
+  },"88": {
     "doc": "PM wakeup using EIC",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/pm/pm_wakeup_eic/readme.html#setting-up-the-hardware"
-  },"83": {
+  },"89": {
     "doc": "PM wakeup using EIC",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | LED is blinked continuously using the SysTick Timer | The console displays the following message . | Select ‘a’ or ‘b’ to enter the low power mode (The LED is turned off when the device enters low power mode) | Press the switch to exit the low power mode | LED will start blinking and the console displays the following message: . | . The following table provides the detail of switch and LED . | Board | Switch Name | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | SW0 | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html#running-the-application",
     "relUrl": "/apps/pm/pm_wakeup_eic/readme.html#running-the-application"
-  },"84": {
+  },"90": {
     "doc": "PM wakeup using EIC",
     "title": "PM wakeup using EIC",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html",
     "relUrl": "/apps/pm/pm_wakeup_eic/readme.html"
-  },"85": {
+  },"91": {
     "doc": "PM wakeup using RTC",
     "title": "PM wakeup using RTC",
     "content": "This example demonstrates entering the low power modes and exiting it using the RTC. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html#pm-wakeup-using-rtc",
     "relUrl": "/apps/pm/pm_wakeup_rtc/readme.html#pm-wakeup-using-rtc"
-  },"86": {
+  },"92": {
     "doc": "PM wakeup using RTC",
     "title": "Description",
     "content": "The PM Peripheral library is used to enter into the low power modes, and uses the RTC timer to wake up the device from the low power mode. The RTC peripheral is run continuously, including in the device’s low-power sleep modes. The RTC counter value is continuously compared with the Compare registers and generates compare match interrupt when compare match occurs to wake up the device. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html#description",
     "relUrl": "/apps/pm/pm_wakeup_rtc/readme.html#description"
-  },"87": {
+  },"93": {
     "doc": "PM wakeup using RTC",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/pm/pm_wakeup_rtc/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/pm/pm_wakeup_rtc/readme.html#downloading-and-building-the-application"
-  },"88": {
+  },"94": {
     "doc": "PM wakeup using RTC",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/pm/pm_wakeup_rtc/readme.html#setting-up-the-hardware"
-  },"89": {
+  },"95": {
     "doc": "PM wakeup using RTC",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | LED is blinked continuously using the SysTick Timer | The console displays the following message . | Select ‘a’ or ‘b’ to enter the low power mode (LED is turned off when the device enters low power mode) | When the device wakes up on RTC compare match interrupt, the LED starts blinking and the console displays the following message . | . The following table provides the details of LED . | Board | LED Name |   | . | SAM D21 Xplained Pro Evaluation Kit | LED0 |   | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 |   | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html#running-the-application",
     "relUrl": "/apps/pm/pm_wakeup_rtc/readme.html#running-the-application"
-  },"90": {
+  },"96": {
     "doc": "PM wakeup using RTC",
     "title": "PM wakeup using RTC",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html",
     "relUrl": "/apps/pm/pm_wakeup_rtc/readme.html"
-  },"91": {
+  },"97": {
     "doc": "PORT polling",
     "title": "PORT polling",
     "content": "This example application demonstrate how to poll the switch input, and indicate the switch status using the LED. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html#port-polling",
     "relUrl": "/apps/port/port_led_on_off_polling/readme.html#port-polling"
-  },"92": {
+  },"98": {
     "doc": "PORT polling",
     "title": "Description",
     "content": "This application uses the PORT Peripheral library to read the GPIO pin connected to the switch, and drives the GPIO pin connected to the LED to indicate the switch status. LED is turned ON when the switch is pressed and turned OFF when the switch is released. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html#description",
     "relUrl": "/apps/port/port_led_on_off_polling/readme.html#description"
-  },"93": {
+  },"99": {
     "doc": "PORT polling",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/port/port_led_on_off_polling/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/port/port_led_on_off_polling/readme.html#downloading-and-building-the-application"
-  },"94": {
+  },"100": {
     "doc": "PORT polling",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/port/port_led_on_off_polling/readme.html#setting-up-the-hardware"
-  },"95": {
+  },"101": {
     "doc": "PORT polling",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | LED is turned on when the switch is pressed and turned off when the switch is released. | . Refer the table below for details of switch and LED . | Board | Switch Name | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | SW0 | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html#running-the-application",
     "relUrl": "/apps/port/port_led_on_off_polling/readme.html#running-the-application"
-  },"96": {
+  },"102": {
     "doc": "PORT polling",
     "title": "PORT polling",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html",
     "relUrl": "/apps/port/port_led_on_off_polling/readme.html"
-  },"97": {
+  },"103": {
     "doc": "RTC alarm interrupt",
     "title": "RTC alarm interrupt",
     "content": "This example shows how to use the RTC to configure the time and generate the alarm. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html#rtc-alarm-interrupt",
     "relUrl": "/apps/rtc/rtc_alarm/readme.html#rtc-alarm-interrupt"
-  },"98": {
+  },"104": {
     "doc": "RTC alarm interrupt",
     "title": "Description",
     "content": "This example application shows how to setup system time and configure alarm using the RTC Peripheral Library. The application sets up an alarm to be generated after 20 seconds of the configured system time. The application displays a message on the alarm trigger. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html#description",
     "relUrl": "/apps/rtc/rtc_alarm/readme.html#description"
-  },"99": {
+  },"105": {
     "doc": "RTC alarm interrupt",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/rtc/rtc_alarm/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/rtc/rtc_alarm/readme.html#downloading-and-building-the-application"
-  },"100": {
+  },"106": {
     "doc": "RTC alarm interrupt",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/rtc/rtc_alarm/readme.html#setting-up-the-hardware"
-  },"101": {
+  },"107": {
     "doc": "RTC alarm interrupt",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application project using its IDE | The console displays the current time and the alarm time (System time starts at 12:00:00 and gets updated every second) . | Once the alarm time is reached, it print the alarm message and turns on the LED (System time keeps updating) . | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html#running-the-application",
     "relUrl": "/apps/rtc/rtc_alarm/readme.html#running-the-application"
-  },"102": {
+  },"108": {
     "doc": "RTC alarm interrupt",
     "title": "RTC alarm interrupt",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html",
     "relUrl": "/apps/rtc/rtc_alarm/readme.html"
-  },"103": {
+  },"109": {
     "doc": "RTC periodic interrupt",
     "title": "RTC periodic interrupt",
     "content": "This example application shows how to use the RTC to generate periodic interrupts. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html#rtc-periodic-interrupt",
     "relUrl": "/apps/rtc/rtc_periodic_timeout/readme.html#rtc-periodic-interrupt"
-  },"104": {
+  },"110": {
     "doc": "RTC periodic interrupt",
     "title": "Description",
     "content": "This example application demonstrates how to use the 32-bit timer mode of the RTC to generate periodic ticks. It toggles an LED every time the callback is triggered. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html#description",
     "relUrl": "/apps/rtc/rtc_periodic_timeout/readme.html#description"
-  },"105": {
+  },"111": {
     "doc": "RTC periodic interrupt",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/rtc/rtc_periodic_timeout/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/rtc/rtc_periodic_timeout/readme.html#downloading-and-building-the-application"
-  },"106": {
+  },"112": {
     "doc": "RTC periodic interrupt",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/rtc/rtc_periodic_timeout/readme.html#setting-up-the-hardware"
-  },"107": {
+  },"113": {
     "doc": "RTC periodic interrupt",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | The LED blinks continuously | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html#running-the-application",
     "relUrl": "/apps/rtc/rtc_periodic_timeout/readme.html#running-the-application"
-  },"108": {
+  },"114": {
     "doc": "RTC periodic interrupt",
     "title": "RTC periodic interrupt",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html",
     "relUrl": "/apps/rtc/rtc_periodic_timeout/readme.html"
-  },"109": {
+  },"115": {
     "doc": "SERCOM I2C EEPROM read write",
     "title": "SERCOM I2C EEPROM read write",
     "content": "This example application demonstrates how to use the SERCOM peripheral to write and read from the I2C serial EEPROM memory. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html#sercom-i2c-eeprom-read-write",
     "relUrl": "/apps/sercom/i2c/master/i2c_eeprom/readme.html#sercom-i2c-eeprom-read-write"
-  },"110": {
+  },"116": {
     "doc": "SERCOM I2C EEPROM read write",
     "title": "Description",
     "content": "This example uses the I2C peripheral library to write an array of values to the I2C Serial EEPROM and verify the value written by reading the values back and comparing it to the value written. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html#description",
     "relUrl": "/apps/sercom/i2c/master/i2c_eeprom/readme.html#description"
-  },"111": {
+  },"117": {
     "doc": "SERCOM I2C EEPROM read write",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/sercom/i2c/master/i2c_eeprom/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/i2c/master/i2c_eeprom/readme.html#downloading-and-building-the-application"
-  },"112": {
+  },"118": {
     "doc": "SERCOM I2C EEPROM read write",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect mikroBUS Xplained Pro board to EXT2 header | Plug the EEPROM 3 click Board into the MikroBus socket of the mikroBUS Xplained Pro board | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect mikroBUS Xplained Pro board to EXT2 header | Plug the EEPROM 3 click Board into the MikroBus socket of the mikroBUS Xplained Pro board | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/i2c/master/i2c_eeprom/readme.html#setting-up-the-hardware"
-  },"113": {
+  },"119": {
     "doc": "SERCOM I2C EEPROM read write",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | LED indicates success or failure: . | The LED is turned ON when the value read from the EEPROM matched with the written value | The LED is turned OFF when the value read from the EEPROM did not match with the written value | . | . The following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html#running-the-application",
     "relUrl": "/apps/sercom/i2c/master/i2c_eeprom/readme.html#running-the-application"
-  },"114": {
+  },"120": {
     "doc": "SERCOM I2C EEPROM read write",
     "title": "SERCOM I2C EEPROM read write",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html",
     "relUrl": "/apps/sercom/i2c/master/i2c_eeprom/readme.html"
-  },"115": {
+  },"121": {
     "doc": "SERCOM I2C EEPROM emulation (I2C slave)",
     "title": "SERCOM I2C EEPROM emulation (I2C slave)",
     "content": "This example application demonstrates how to use the SERCOM peripheral in slave mode. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#sercom-i2c-eeprom-emulation-i2c-slave",
     "relUrl": "/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#sercom-i2c-eeprom-emulation-i2c-slave"
-  },"116": {
+  },"122": {
     "doc": "SERCOM I2C EEPROM emulation (I2C slave)",
     "title": "Description",
     "content": "This example uses the I2C peripheral library in slave mode and emulates an EEPROM of 512 bytes. There are two pages each of size 256 bytes. I2C slave expects two bytes of memory address from the I2C master and the memory address can range from 0x00 to 0x1FF. I2C slave application supports following: . Byte Write: The I2C master sends the slave address, followed by two bytes of memory address. The slave provides the data present at the requested memory address. Page Write: A page write is initiated the same way as a byte write, but the I2C master can write up-to 256 bytes (1 page). If more than 256 bytes are sent by the I2C master to the I2C slave, the memory address will “roll over” and previous data will be overwritten. The address “roll over” during write is from the last byte of the current page to the first byte of the same page. Current Address Read: The internal memory address counter maintains the last address accessed during the last read or write operation, incremented by one. Once the device address with the read/write bit set to one is clocked in and acknowledged by the EEPROM, the data byte at the current address is serially clocked out. After reading the data from the current address, the I2C master sends NAK and generates a STOP condition. Random Read: The I2C master writes the 2 byte memory address and then reads the data from that memory address. After reading the data, the I2C master sends NAK and generates a STOP condition. Sequential Read: Sequential reads are initiated by either a current address read or a random address read. As long as the EEPROM receives an acknowledge, it will continue to increment the memory address and serially clock out sequential data bytes. When the memory address limit is reached (0x1FF), the memory address will “roll over” to 0x00 and the sequential read will continue. The sequential read operation is terminated when the I2C master sends a NAK and generates a STOP condition. To run the application, two evaluation kits will be required - one acting as the I2C master and the other as the I2C slave. The I2C master application to be used for this demo application is available under apps/sercom/i2c/master/i2c_eeprom/firmware folder. I2C master writes an array of values to the I2C slave and verifies the value written by reading the values back and comparing it to the value written. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#description",
     "relUrl": "/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#description"
-  },"117": {
+  },"123": {
     "doc": "SERCOM I2C EEPROM emulation (I2C slave)",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/sercom/i2c/slave/i2c_eeprom_emulation/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#downloading-and-building-the-application"
-  },"118": {
+  },"124": {
     "doc": "SERCOM I2C EEPROM emulation (I2C slave)",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Hardware setup requires two boards, one acting as the I2C Master and the other as the I2C slave. Note: The I2C master demo - i2c_eeprom on the SAM E54 Xplained Pro uses the on-board EEPROM and hence cannot be used as is with this I2C slave application . Setting up SAM D21 Xplained Pro Evaluation Kit . | On EXT1 header, connect I2C SDA line on Pin 11 (PA08) and I2C SCL line on Pin 12 (PA09) with the corresponding SDA and SCL lines of the I2C master | Connect a ground wire from Pin 2 of EXT1 to the ground of the I2C master | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | On EXT1 header, connect I2C SDA line on Pin 11 (PA08) and I2C SCL line on Pin 12 (PA09) with the corresponding SDA and SCL lines of the I2C master | Connect a ground wire from Pin 2 of EXT1 to the ground of the I2C master | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#setting-up-the-hardware"
-  },"119": {
+  },"125": {
     "doc": "SERCOM I2C EEPROM emulation (I2C slave)",
     "title": "Running the Application",
     "content": ". | Build and program I2C EEPROM application from apps/sercom/i2c/master/i2c_eeprom/firmware onto the evaluation kit used as I2C master | Build and Program I2C slave application onto the evaluation kit used as I2C slave | Run application on I2C slave board and then run the application on I2C master board | LED on the I2C master board indicates success or failure: . | The LED is turned ON when the value read from the I2C slave matches with the written value | The LED is turned OFF when the value read from the I2C slave did not match with the written value | . | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#running-the-application",
     "relUrl": "/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html#running-the-application"
-  },"120": {
+  },"126": {
     "doc": "SERCOM I2C EEPROM emulation (I2C slave)",
     "title": "SERCOM I2C EEPROM emulation (I2C slave)",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html",
     "relUrl": "/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html"
-  },"121": {
+  },"127": {
     "doc": "SERCOM SPI EEPROM read write",
     "title": "SERCOM SPI EEPROM read write",
     "content": "This example application demonstrates how to use the SERCOM SPI peripheral to write and read from the SPI serial EEPROM memory. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#sercom-spi-eeprom-read-write",
     "relUrl": "/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#sercom-spi-eeprom-read-write"
-  },"122": {
+  },"128": {
     "doc": "SERCOM SPI EEPROM read write",
     "title": "Description",
     "content": "This example uses the SERCOM SPI peripheral library to write an array of values to the SPI Serial EEPROM and verify the value written by reading the values back and comparing it to the value written. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#description",
     "relUrl": "/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#description"
-  },"123": {
+  },"129": {
     "doc": "SERCOM SPI EEPROM read write",
     "title": "Downloading and building the application",
     "content": "To download or clone this application from Github, go to the top level of the repository and click . Path of the application within the repository is apps/sercom/spi/spi_eeprom_write_read/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#downloading-and-building-the-application"
-  },"124": {
+  },"130": {
     "doc": "SERCOM SPI EEPROM read write",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect a mikroBUS Xplained Pro board to the EXT2 header | Plug an EEPROM 4 Click board into the MikroBus socket of the mikroBUS Xplained Pro board | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect a mikroBUS Xplained Pro board to the EXT2 header | Plug an EEPROM 4 Click board into the MikroBus socket of the mikroBUS Xplained Pro board | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#setting-up-the-hardware"
-  },"125": {
+  },"131": {
     "doc": "SERCOM SPI EEPROM read write",
     "title": "Running the Application",
     "content": ". | Build and Program the application project using its IDE | LED indicates the success or failure: . | LED is turned ON when the value read from the EEPROM matched with the written value | LED is turned OFF when the value read from the EEPROM did not match with the written value | . | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#running-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_eeprom_write_read/readme.html#running-the-application"
-  },"126": {
+  },"132": {
     "doc": "SERCOM SPI EEPROM read write",
     "title": "SERCOM SPI EEPROM read write",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html",
     "relUrl": "/apps/sercom/spi/master/spi_eeprom_write_read/readme.html"
-  },"127": {
+  },"133": {
     "doc": "SERCOM SPI ping pong with DMA",
     "title": "SERCOM SPI ping pong with DMA",
     "content": "This example demonstrates how to continuously transmit and receive data over a SPI interface using ping pong buffers with DMA. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#sercom-spi-ping-pong-with-dma",
     "relUrl": "/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#sercom-spi-ping-pong-with-dma"
-  },"128": {
+  },"134": {
     "doc": "SERCOM SPI ping pong with DMA",
     "title": "Description",
     "content": "The DMA peripheral provides support to implement the ping-pong buffering. The DMA transmits and receives data from one pair of buffers, when the CPU works on the second pair. When the DMA is transmitting data from the ping buffer, the CPU works on the pong buffer. When the DMA completes the transfer, it generates interrupt to indicate transfer completion from the ping buffer. DMA channel is automatically re-initialized to transmit data from the pong buffer while the CPU works on the ping buffer. When the DMA is receiving data to the ping buffer, the CPU works on the the pong buffer.When DMA completes the transfer, it generates interrupt to indicate the availability of the data in the ping buffer. DMA channel is automatically re-initialized to receive data in the pong buffer while the CPU works on the ping buffer. Application transmits an array of values and verifies the value transmitted by receiving the values back with loop back and comparing it to the value transmitted. This application requires that the MOSI output pin to be connected to the MISO input pin so that anything transmitted will also be received. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#description",
     "relUrl": "/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#description"
-  },"129": {
+  },"135": {
     "doc": "SERCOM SPI ping pong with DMA",
     "title": "Downloading and building the application",
     "content": "To download or clone this application from Github, go to the top level of the repository and click . Path of the application within the repository is apps/sercom/spi/spi_ping_pong_with_dma/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#downloading-and-building-the-application"
-  },"130": {
+  },"136": {
     "doc": "SERCOM SPI ping pong with DMA",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#setting-up-the-hardware"
-  },"131": {
+  },"137": {
     "doc": "SERCOM SPI ping pong with DMA",
     "title": "Running the Application",
     "content": ". | Build and Program the application project using its IDE | LED indicates the success or failure: . | The LED is turned ON when the value received matched with the transmitted value | The LED is turned OFF when the value received did not match with the transmitted value | . | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#running-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html#running-the-application"
-  },"132": {
+  },"138": {
     "doc": "SERCOM SPI ping pong with DMA",
     "title": "SERCOM SPI ping pong with DMA",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html",
     "relUrl": "/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html"
-  },"133": {
+  },"139": {
     "doc": "SERCOM SPI blocking",
     "title": "SERCOM SPI blocking",
     "content": "This example application demonstrates how to use the SERCOM SPI peripheral to transmit and receive a block of data in a blocking manner. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#sercom-spi-blocking",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#sercom-spi-blocking"
-  },"134": {
+  },"140": {
     "doc": "SERCOM SPI blocking",
     "title": "Description",
     "content": "This example shows the transmit and receive operation over a SPI interface in a blocking manner. The CPU polls the peripheral register continuously to manage the transfer. It transmits an array of values and verifies the value transmitted by receiving the values back with loop back and comparing it to the value transmitted. The loop back test requires the MOSI output pin to be connected to the MISO input pin so that anything transmitted will also be received. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#description",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#description"
-  },"135": {
+  },"141": {
     "doc": "SERCOM SPI blocking",
     "title": "Downloading and building the application",
     "content": "To download or clone this application from Github, go to the top level of the repository and click . Path of the application within the repository is apps/sercom/spi/spi_self_loopback_blocking/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#downloading-and-building-the-application"
-  },"136": {
+  },"142": {
     "doc": "SERCOM SPI blocking",
     "title": "Setting up the hardware",
-    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
+    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#setting-up-the-hardware"
-  },"137": {
+  },"143": {
     "doc": "SERCOM SPI blocking",
     "title": "Running the Application",
     "content": ". | Build and Program the application project using its IDE | LED indicates the success or failure: . | The LED is turned ON when the value received matched with the transmitted value | The LED is turned OFF when the value received did not match with the transmitted value | . | SPI data transfer and compare match checking happens only one time | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#running-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html#running-the-application"
-  },"138": {
+  },"144": {
     "doc": "SERCOM SPI blocking",
     "title": "SERCOM SPI blocking",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html"
-  },"139": {
+  },"145": {
     "doc": "SERCOM SPI interrupt",
     "title": "SERCOM SPI interrupt",
     "content": "This example application shows how to use SERCOM SPI PLIB with external loop back to write and then read back an array of data in interrupt mode. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#sercom-spi-interrupt",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#sercom-spi-interrupt"
-  },"140": {
+  },"146": {
     "doc": "SERCOM SPI interrupt",
     "title": "Description",
     "content": "This example shows the transmit and receive operation over a SPI interface in a non-blocking manner. The peripheral interrupt is used to manage the transfer. It transmits an array of values and verifies the value transmitted by receiving the values back with look back and comparing it to the value transmitted. The loop back test requires the MOSI output pin to be connected to the MISO input pin so that anything transmitted will also be received. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#description",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#description"
-  },"141": {
+  },"147": {
     "doc": "SERCOM SPI interrupt",
     "title": "Downloading and building the application",
     "content": "To download or clone this application from Github, go to the top level of the repository and click . Path of the application within the repository is apps/sercom/spi/spi_self_loopback_interrupt/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#downloading-and-building-the-application"
-  },"142": {
+  },"148": {
     "doc": "SERCOM SPI interrupt",
     "title": "Setting up the hardware",
-    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
+    "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Use a jumper wire to short pin 16 and pin 17 of the EXT2 header | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#setting-up-the-hardware"
-  },"143": {
+  },"149": {
     "doc": "SERCOM SPI interrupt",
     "title": "Running the Application",
     "content": ". | Build and Program the application project using its IDE | LED indicates the success or failure: . | The LED is turned ON when the value received matched with the transmitted value | The LED is turned OFF when the value received did not match with the transmitted value | . | SPI data transfer and compare match checking happens only one time | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#running-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html#running-the-application"
-  },"144": {
+  },"150": {
     "doc": "SERCOM SPI interrupt",
     "title": "SERCOM SPI interrupt",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html",
     "relUrl": "/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html"
-  },"145": {
+  },"151": {
     "doc": "SERCOM SPI Master read write test application",
     "title": "SERCOM SPI Master read write test application",
     "content": "This is a SPI Master test application which is provided to demonstrate communication between SPI master and the corresponding SPI slave application available under - apps/sercom/spi/slave/spi_write_read/firmware . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html#sercom-spi-master-read-write-test-application",
     "relUrl": "/apps/sercom/spi/master/spi_write_read_test_app/readme.html#sercom-spi-master-read-write-test-application"
-  },"146": {
+  },"152": {
     "doc": "SERCOM SPI Master read write test application",
     "title": "Description",
     "content": "This example uses the SERCOM SPI peripheral library in master mode and serves as a test application to demonstrate communication between SPI master and corresponding SPI slave application available at apps/sercom/spi/slave/spi_write_read/firmware. The SPI master writes data by sending a write command followed by two bytes of memory address followed by the data to be written. &lt; WR_CMD &gt; &lt; ADDR_MSB &gt; &lt; ADDR_LSB &gt; &lt; DATA0 &gt; … &lt; DATA n &gt; . After sending the write command, the SPI master polls the busy status of SPI slave by reading the busy status byte from SPI slave. Once the SPI slave is ready, the SPI master reads the data by sending read command followed by two bytes of memory address and the number of bytes to read. &lt; RD_CMD &gt; &lt; ADDR_MSB &gt; &lt; ADDR_LSB &gt; &lt; NUM_BYTES &gt; . The SPI slave responds by sending the data at the requested memory address. The SPI master compares the sent data with the received data and repeats the test if it matches. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html#description",
     "relUrl": "/apps/sercom/spi/master/spi_write_read_test_app/readme.html#description"
-  },"147": {
+  },"153": {
     "doc": "SERCOM SPI Master read write test application",
     "title": "Downloading and building the application",
     "content": "To download or clone this application from Github, go to the top level of the repository and click . Path of the application within the repository is apps/sercom/spi/master/spi_write_read_test_app/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_write_read_test_app/readme.html#downloading-and-building-the-application"
-  },"148": {
+  },"154": {
     "doc": "SERCOM SPI Master read write test application",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | To run this demo two SAM DA1 Xplained Pro Evaluation Kit are required. One will be progammed as SPI master and other will be programmed as SPI slave. | Connect Pin 15, 16, 17, 18 on EXT2 of SPI slave to Pin 15, 16, 17, 18 on EXT2 of SPI master . | Pin 15 - SPI Chip Select | Pin 16 - MOSI | Pin 17 - MISO | Pin 18 - SCK | . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/spi/master/spi_write_read_test_app/readme.html#setting-up-the-hardware"
-  },"149": {
+  },"155": {
     "doc": "SERCOM SPI Master read write test application",
     "title": "Running the Application",
     "content": ". | Build and Program the SPI master application project using its IDE | Build and Program the SPI slave application project using its IDE. Path of the SPI Slave application within the repository is apps/sercom/spi/slave/spi_write_read/firmware | On the SPI master board, press switch to start reading and writing data | LED on SPI master board indicates the success or failure: . | LED is turned ON when the data read from the SPI slave matches with the data written | LED is turned OFF when the data read from the SPI slave does not match with the data written | . | . Following table provides the Switch and LED name: . | Board | Switch Name | LED Name | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html#running-the-application",
     "relUrl": "/apps/sercom/spi/master/spi_write_read_test_app/readme.html#running-the-application"
-  },"150": {
+  },"156": {
     "doc": "SERCOM SPI Master read write test application",
     "title": "SERCOM SPI Master read write test application",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html",
     "relUrl": "/apps/sercom/spi/master/spi_write_read_test_app/readme.html"
-  },"151": {
+  },"157": {
     "doc": "SERCOM SPI Slave read write",
     "title": "SERCOM SPI Slave read write",
     "content": "This example application demonstrates how to use the SERCOM SPI peripheral in slave mode . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html#sercom-spi-slave-read-write",
     "relUrl": "/apps/sercom/spi/slave/spi_write_read/readme.html#sercom-spi-slave-read-write"
-  },"152": {
+  },"158": {
     "doc": "SERCOM SPI Slave read write",
     "title": "Description",
     "content": "This example uses the SERCOM SPI peripheral library in slave mode and allows reading and writing data from/to its internal buffer by a SPI master. The SPI master writes data by sending a write command followed by two bytes of memory address followed by the data to be written. &lt; WR_CMD &gt; &lt; ADDR_MSB &gt; &lt; ADDR_LSB &gt; &lt; DATA0 &gt; … &lt; DATA n &gt; . After sending the write command, the SPI master polls the busy status of SPI slave by reading the busy status byte from SPI slave. Once the SPI slave is ready, the SPI master reads the data by sending read command followed by two bytes of memory address and the number of bytes to read. &lt; RD_CMD &gt; &lt; ADDR_MSB &gt; &lt; ADDR_LSB &gt; &lt; NUM_BYTES &gt; . The SPI slave responds by sending the data at the requested memory address. The SPI master compares the sent data with the received data and repeats the test if it matches. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html#description",
     "relUrl": "/apps/sercom/spi/slave/spi_write_read/readme.html#description"
-  },"153": {
+  },"159": {
     "doc": "SERCOM SPI Slave read write",
     "title": "Downloading and building the application",
     "content": "To download or clone this application from Github, go to the top level of the repository and click . Path of the application within the repository is apps/sercom/spi/slave/spi_write_read/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/spi/slave/spi_write_read/readme.html#downloading-and-building-the-application"
-  },"154": {
+  },"160": {
     "doc": "SERCOM SPI Slave read write",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | To run this demo two SAM DA1 Xplained Pro Evaluation Kit are required. One will be progammed as SPI master and other will be programmed as SPI slave. | Connect Pin 15, 16, 17, 18 on EXT2 of SPI slave to Pin 15, 16, 17, 18 on EXT2 of SPI master . | Pin 15 - SPI Chip Select | Pin 16 - MOSI | Pin 17 - MISO | Pin 18 - SCK | . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/spi/slave/spi_write_read/readme.html#setting-up-the-hardware"
-  },"155": {
+  },"161": {
     "doc": "SERCOM SPI Slave read write",
     "title": "Running the Application",
     "content": ". | Build and Program the SPI master application project using its IDE. Path of the SPI Master application within the repository is apps/sercom/spi/master/spi_write_read_test_app/firmware | Build and Program the SPI slave application project using its IDE | On the SPI master board, press switch to start reading and writing data | LED on SPI master board indicates the success or failure: . | LED is turned ON when the data read from the SPI slave matches with the data written | LED is turned OFF when the data read from the SPI slave does not match with the data written | . | . Following table provides the Switch and LED name: . | Board | Switch Name | LED Name | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html#running-the-application",
     "relUrl": "/apps/sercom/spi/slave/spi_write_read/readme.html#running-the-application"
-  },"156": {
+  },"162": {
     "doc": "SERCOM SPI Slave read write",
     "title": "SERCOM SPI Slave read write",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html",
     "relUrl": "/apps/sercom/spi/slave/spi_write_read/readme.html"
-  },"157": {
+  },"163": {
     "doc": "SERCOM USART blocking",
     "title": "SERCOM USART blocking",
     "content": "This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer block of data in a blocking manner. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html#sercom-usart-blocking",
     "relUrl": "/apps/sercom/usart/usart_echo_blocking/readme.html#sercom-usart-blocking"
-  },"158": {
+  },"164": {
     "doc": "SERCOM USART blocking",
     "title": "Description",
     "content": "This example shows the read and write operation over a USART in a blocking manner. The CPU polls the peripheral register continuously to manage the transfer. It receives a line of characters from the terminal window and echoes them back. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html#description",
     "relUrl": "/apps/sercom/usart/usart_echo_blocking/readme.html#description"
-  },"159": {
+  },"165": {
     "doc": "SERCOM USART blocking",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/sercom/usart/usart_echo_blocking/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/usart/usart_echo_blocking/readme.html#downloading-and-building-the-application"
-  },"160": {
+  },"166": {
     "doc": "SERCOM USART blocking",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/usart/usart_echo_blocking/readme.html#setting-up-the-hardware"
-  },"161": {
+  },"167": {
     "doc": "SERCOM USART blocking",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | The console displays the following message . | Type a line of characters and press the Enter key (NOTE: Number of characters entered before pressing enter key must be less than 256)) | Entered line will be echoed back and the LED is toggled | The following table provides the LED names | . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html#running-the-application",
     "relUrl": "/apps/sercom/usart/usart_echo_blocking/readme.html#running-the-application"
-  },"162": {
+  },"168": {
     "doc": "SERCOM USART blocking",
     "title": "SERCOM USART blocking",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html",
     "relUrl": "/apps/sercom/usart/usart_echo_blocking/readme.html"
-  },"163": {
+  },"169": {
     "doc": "SERCOM USART interrupt",
     "title": "SERCOM USART interrupt",
     "content": "This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer data in a non-blocking manner. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html#sercom-usart-interrupt",
     "relUrl": "/apps/sercom/usart/usart_echo_interrupt/readme.html#sercom-usart-interrupt"
-  },"164": {
+  },"170": {
     "doc": "SERCOM USART interrupt",
     "title": "Description",
     "content": "This example shows the read and write operation over a UART in a non-blocking manner. The peripheral interrupt is used to manage the transfer. It receives 10 characters from the terminal window and echoes them back. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html#description",
     "relUrl": "/apps/sercom/usart/usart_echo_interrupt/readme.html#description"
-  },"165": {
+  },"171": {
     "doc": "SERCOM USART interrupt",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/sercom/usart/usart_echo_interrupt/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/usart/usart_echo_interrupt/readme.html#downloading-and-building-the-application"
-  },"166": {
+  },"172": {
     "doc": "SERCOM USART interrupt",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/usart/usart_echo_interrupt/readme.html#setting-up-the-hardware"
-  },"167": {
+  },"173": {
     "doc": "SERCOM USART interrupt",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | The console displays the following message . | Type 10 characters in the console | Entered characters will be echoed back and the LED is toggled | The following table provides the LED names | . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html#running-the-application",
     "relUrl": "/apps/sercom/usart/usart_echo_interrupt/readme.html#running-the-application"
-  },"168": {
+  },"174": {
     "doc": "SERCOM USART interrupt",
     "title": "SERCOM USART interrupt",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html",
     "relUrl": "/apps/sercom/usart/usart_echo_interrupt/readme.html"
-  },"169": {
+  },"175": {
     "doc": "SERCOM USART ring buffer",
     "title": "SERCOM USART ring buffer",
     "content": "This example application demonstrates how to use the SERCOM peripheral in USART ring buffer mode to transfer data in a non-blocking manner. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#sercom-usart-ring-buffer",
     "relUrl": "/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#sercom-usart-ring-buffer"
-  },"170": {
+  },"176": {
     "doc": "SERCOM USART ring buffer",
     "title": "Description",
     "content": "This example demonstrates read and write over USART using the ring buffer mode. The USART is configured in non-blocking mode (interrupts enabled). The example asks the user to enter 10 characters. Once received, the characters are echoed back. In the process, the example demonstrates various ring buffer APIs. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#description",
     "relUrl": "/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#description"
-  },"171": {
+  },"177": {
     "doc": "SERCOM USART ring buffer",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/sercom/usart/usart_ring_buffer_interrupt/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#downloading-and-building-the-application"
-  },"172": {
+  },"178": {
     "doc": "SERCOM USART ring buffer",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#setting-up-the-hardware"
-  },"173": {
+  },"179": {
     "doc": "SERCOM USART ring buffer",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | The console displays the following message . | Console displays the initial transmit and receive buffer sizes | It then adds 10 characters - “0123456789” to the transmit buffer and displays the available free space in the transmit buffer after the 10 characters have been added | The message asks the user to enter 10 characters | NOTE: For this example, the “Free Space in Transmit Buffer = xx”, where xx can be anything between 117 to 127, depending on the USART baud rate and the CPU execution speed | . | Enter 10 characters on the terminal | Entered characters are echoed back on the console and message is displayed indicating that the receive notification is turned on . | For every 10 characters typed, it will be echoed back on the console . | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#running-the-application",
     "relUrl": "/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html#running-the-application"
-  },"174": {
+  },"180": {
     "doc": "SERCOM USART ring buffer",
     "title": "SERCOM USART ring buffer",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html",
     "relUrl": "/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html"
-  },"175": {
+  },"181": {
     "doc": "Systick periodic interrupt",
     "title": "Systick periodic interrupt",
     "content": "This example shows how to use the SysTick to generate periodic interrupts. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html#systick-periodic-interrupt",
     "relUrl": "/apps/systick/systick_periodic_timeout/readme.html#systick-periodic-interrupt"
-  },"176": {
+  },"182": {
     "doc": "Systick periodic interrupt",
     "title": "Description",
     "content": "This example application configures the SysTick Peripheral Library to generate periodic ticks. The application registers a periodic timeout callback. It toggles an LED every time the callback is triggered. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html#description",
     "relUrl": "/apps/systick/systick_periodic_timeout/readme.html#description"
-  },"177": {
+  },"183": {
     "doc": "Systick periodic interrupt",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/systick/systick_periodic_timeout/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/systick/systick_periodic_timeout/readme.html#downloading-and-building-the-application"
-  },"178": {
+  },"184": {
     "doc": "Systick periodic interrupt",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/systick/systick_periodic_timeout/readme.html#setting-up-the-hardware"
-  },"179": {
+  },"185": {
     "doc": "Systick periodic interrupt",
     "title": "Running the Application",
-    "content": ". | Build and Program the application using its IDE | The LED blinks continuously | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | SW0 | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | . |   |   | . ",
+    "content": ". | Build and Program the application using its IDE | The LED blinks continuously | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html#running-the-application",
     "relUrl": "/apps/systick/systick_periodic_timeout/readme.html#running-the-application"
-  },"180": {
+  },"186": {
     "doc": "Systick periodic interrupt",
     "title": "Systick periodic interrupt",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html",
     "relUrl": "/apps/systick/systick_periodic_timeout/readme.html"
-  },"181": {
+  },"187": {
     "doc": "TC capture mode",
     "title": "TC capture mode",
     "content": "This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html#tc-capture-mode",
     "relUrl": "/apps/tc/tc_capture_mode/readme.html#tc-capture-mode"
-  },"182": {
+  },"188": {
     "doc": "TC capture mode",
     "title": "Description",
     "content": "The TC channel is configured in capture mode to measure duty cycle and frequency of the PWM signal. The PWM signal is generated using another TC channel which is configured in compare mode. Output of the compare TC channel is connected to input of the capture TC channel. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html#description",
     "relUrl": "/apps/tc/tc_capture_mode/readme.html#description"
-  },"183": {
+  },"189": {
     "doc": "TC capture mode",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/tc/tc_capture_mode/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/tc/tc_capture_mode/readme.html#downloading-and-building-the-application"
-  },"184": {
+  },"190": {
     "doc": "TC capture mode",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | TC3 generates the PWM waveform on pin PA19 . | TC3 output is routed using EIC and EVSYS to TC4 input event line | . | TC4 is configured in capture mode . | Capture trigger is provided by input event line | . | Use a jumper wire to connect “Pin 18 of EXT2 (TC3_W01)” to “Pin 17 of EXT2 (EIC_EXTINT0)” | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | TC3 generates the PWM waveform on pin PA19 . | TC3 output is routed using EIC and EVSYS to TC4 input event line | . | TC4 is configured in capture mode . | Capture trigger is provided by input event line | . | Use a jumper wire to connect “Pin 18 of EXT2 (TC3_W01)” to “Pin 17 of EXT2 (EIC_EXTINT0)” | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/tc/tc_capture_mode/readme.html#setting-up-the-hardware"
-  },"185": {
+  },"191": {
     "doc": "TC capture mode",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | Console displays the frequency and duty cycle of the input signal | Frequency is constant (800 Hz) and duty cycle changes by 1% | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html#running-the-application",
     "relUrl": "/apps/tc/tc_capture_mode/readme.html#running-the-application"
-  },"186": {
+  },"192": {
     "doc": "TC capture mode",
     "title": "TC capture mode",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html",
     "relUrl": "/apps/tc/tc_capture_mode/readme.html"
-  },"187": {
+  },"193": {
     "doc": "TC compare mode",
     "title": "TC compare mode",
     "content": "This example shows how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html#tc-compare-mode",
     "relUrl": "/apps/tc/tc_compare_mode/readme.html#tc-compare-mode"
-  },"188": {
+  },"194": {
     "doc": "TC compare mode",
     "title": "Description",
     "content": "Three TC channels are configured in compare mode. Each channel generates different output waveform depending upon configured action on compare match and period match. Active low output: Output is set high on compare 1 match and is set low on compare 0 match. Active high output: Output is set low on compare 1 match and is set high on compare 0 match. Toggle output: Output toggles on compare 0 match. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html#description",
     "relUrl": "/apps/tc/tc_compare_mode/readme.html#description"
-  },"189": {
+  },"195": {
     "doc": "TC compare mode",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/tc/tc_compare_mode/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/tc/tc_compare_mode/readme.html#downloading-and-building-the-application"
-  },"190": {
+  },"196": {
     "doc": "TC compare mode",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/tc/tc_compare_mode/readme.html#setting-up-the-hardware"
-  },"191": {
+  },"197": {
     "doc": "TC compare mode",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | Observe generated waveforms on the oscilloscope | . SAM D21 Xplained Pro Evaluation Kit . | Timer Channel | Pin | Observable characteristic of the waveform | . | TC3_WO1 | PA19(Pin 18 of EXT2) | Active low output with 75 Hz frequency | . | TC4_WO1 | PB09(Pin 13 of EXT1) | Active high output with 75 Hz frequency | . | TC6_WO1 | PB03 (Pin 8 of EXT1) | Toggle output with 37.5 Hz frequency | . |   |   |   | . SAM DA1 Xplained Pro Evaluation Kit . | Timer Channel | Pin | Observable characteristic of the waveform | . | TC3_WO1 | PA19(Pin 18 of EXT2) | Active low output with 75 Hz frequency | . | TC4_WO1 | PB09(Pin 13 of EXT1) | Active high output with 75 Hz frequency | . | TC6_WO1 | PB03 (Pin 8 of EXT1) | Toggle output with 37.5 Hz frequency | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html#running-the-application",
     "relUrl": "/apps/tc/tc_compare_mode/readme.html#running-the-application"
-  },"192": {
+  },"198": {
     "doc": "TC compare mode",
     "title": "TC compare mode",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html",
     "relUrl": "/apps/tc/tc_compare_mode/readme.html"
-  },"193": {
+  },"199": {
     "doc": "TC timer mode",
     "title": "TC timer mode",
     "content": "This example shows how to use the TC module in timer mode to generate periodic interrupt. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html#tc-timer-mode",
     "relUrl": "/apps/tc/tc_timer_mode/readme.html#tc-timer-mode"
-  },"194": {
+  },"200": {
     "doc": "TC timer mode",
     "title": "Description",
     "content": "TC channel is configured in timer mode and generates periodic interrupt. LED is toggled in the interrupt handler to indicate periodic callback. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html#description",
     "relUrl": "/apps/tc/tc_timer_mode/readme.html#description"
-  },"195": {
+  },"201": {
     "doc": "TC timer mode",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/tc/tc_timer_mode/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/tc/tc_timer_mode/readme.html#downloading-and-building-the-application"
-  },"196": {
+  },"202": {
     "doc": "TC timer mode",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/tc/tc_timer_mode/readme.html#setting-up-the-hardware"
-  },"197": {
+  },"203": {
     "doc": "TC timer mode",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | Observe that the LED blinks once every second | . Following table provides the LED name: . | Board | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | LED0 | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html#running-the-application",
     "relUrl": "/apps/tc/tc_timer_mode/readme.html#running-the-application"
-  },"198": {
+  },"204": {
     "doc": "TC timer mode",
     "title": "TC timer mode",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html",
     "relUrl": "/apps/tc/tc_timer_mode/readme.html"
-  },"199": {
+  },"205": {
     "doc": "TCC PWM generation",
     "title": "TCC PWM generation",
     "content": "This example application shows how to use the TCC to generate a 2 or 3 phase PWM signals for motor control with dead time. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html#tcc-pwm-generation",
     "relUrl": "/apps/tcc/tcc_synchronous_pwm_channels/readme.html#tcc-pwm-generation"
-  },"200": {
+  },"206": {
     "doc": "TCC PWM generation",
     "title": "Description",
     "content": "TCC module is configured to generate synchronous 2 or 3 phase PWM signals with dead time. The duty cycle of the PWM signals is updated in the period interrupt handler. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html#description",
     "relUrl": "/apps/tcc/tcc_synchronous_pwm_channels/readme.html#description"
-  },"201": {
+  },"207": {
     "doc": "TCC PWM generation",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/tcc/tcc_synchronous_pwm_channels/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/tcc/tcc_synchronous_pwm_channels/readme.html#downloading-and-building-the-application"
-  },"202": {
+  },"208": {
     "doc": "TCC PWM generation",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/tcc/tcc_synchronous_pwm_channels/readme.html#setting-up-the-hardware"
-  },"203": {
+  },"209": {
     "doc": "TCC PWM generation",
     "title": "Running the Application",
     "content": ". | Build and Program the application using its IDE | Observe the high-side and low-side PWM waveforms on oscilloscope | Observe the dead time between the high side and the low side | Observe the pwm frequency to be 10 KHz | . Output waveforms: . SAM D21 Xplained Pro Evaluation Kit pin details: . | Signal Name | Pad | Pin | . | CH0-PWMH | PA08 | Pin 11 of EXT2 connector | . | CH0-PWML | PB10 | Pin 14 of EXT2 connector | . | CH1-PWMH | PA09 | Pin 12 of EXT2 connector | . | CH1-PWML | PB11 | Pin 13 of EXT2 connector | . | CH2-PWMH | PA10 | Pin 3 of EXT2 connector | . | CH2-PWML | PB12 | Pin 7 of EXT2 connector | . |   |   |   | . SAM DA1 Xplained Pro Evaluation Kit pin details: . | Signal Name | Pad | Pin | . | CH0-PWMH | PA08 | Pin 11 of EXT2 connector | . | CH0-PWML | PB10 | Pin 14 of EXT2 connector | . | CH1-PWMH | PA09 | Pin 12 of EXT2 connector | . | CH1-PWML | PB11 | Pin 13 of EXT2 connector | . | CH2-PWMH | PA10 | Pin 3 of EXT2 connector | . | CH2-PWML | PB12 | Pin 7 of EXT2 connector | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html#running-the-application",
     "relUrl": "/apps/tcc/tcc_synchronous_pwm_channels/readme.html#running-the-application"
-  },"204": {
+  },"210": {
     "doc": "TCC PWM generation",
     "title": "TCC PWM generation",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html",
     "relUrl": "/apps/tcc/tcc_synchronous_pwm_channels/readme.html"
-  },"205": {
+  },"211": {
     "doc": "WDT timeout",
     "title": "WDT timeout",
     "content": "This example shows how to generate a Watchdog timer reset by emulating a deadlock. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html#wdt-timeout",
     "relUrl": "/apps/wdt/wdt_timeout/readme.html#wdt-timeout"
-  },"206": {
+  },"212": {
     "doc": "WDT timeout",
     "title": "Description",
     "content": "This example application shows how the WDT peripheral library resets the watchdog timer by not feeding the watchdog on switch press. The application sets up the watchdog to reset the device. The application also sets up the timer to blink an LED to emulate a process. A user switch press forces the device to wait in an infinite loop to emulate a deadlock. As a result a device reset is triggered as the watchdog counter overflows the bounded value. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html#description",
     "relUrl": "/apps/wdt/wdt_timeout/readme.html#description"
-  },"207": {
+  },"213": {
     "doc": "WDT timeout",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/wdt/wdt_timeout/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/wdt/wdt_timeout/readme.html#downloading-and-building-the-application"
-  },"208": {
+  },"214": {
     "doc": "WDT timeout",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/wdt/wdt_timeout/readme.html#setting-up-the-hardware"
-  },"209": {
+  },"215": {
     "doc": "WDT timeout",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application project using its IDE | LED should be blinking and the console displays the following message . | Press the switch to put the system in a deadlock | LED should stop blinking and the console should print the following message . | WDT will reset the device in four seconds and the demonstration should restart | . Refer the table below for details of switch and LED: . | Board | Switch Name | LED Name | . | SAM D21 Xplained Pro Evaluation Kit | SW0 | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | SW0 | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html#running-the-application",
     "relUrl": "/apps/wdt/wdt_timeout/readme.html#running-the-application"
-  },"210": {
+  },"216": {
     "doc": "WDT timeout",
     "title": "WDT timeout",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html",
     "relUrl": "/apps/wdt/wdt_timeout/readme.html"
-  },"211": {
+  },"217": {
     "doc": "AC Sleepwalking",
     "title": "AC Sleepwalking",
     "content": "This example application shows how to use the AC Peripheral library to perform a single shot comparison in standby sleep mode periodically and wake up the device at the end of a successful comparison. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html#ac-sleepwalking",
     "relUrl": "/apps/ac/ac_sleepwalk_singleshot/readme.html#ac-sleepwalking"
-  },"212": {
+  },"218": {
     "doc": "AC Sleepwalking",
     "title": "Description",
     "content": "Single shot conversion is triggered by RTC compare event. Generation of a trigger and compare operation are done while the CPU is in the standby sleep mode. AC generates the interrupt on the end of the comparison which wakes the CPU. ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html#description",
     "relUrl": "/apps/ac/ac_sleepwalk_singleshot/readme.html#description"
-  },"213": {
+  },"219": {
     "doc": "AC Sleepwalking",
     "title": "Downloading and building the application",
     "content": "To clone or download this application from Github, go to the main page of this repository and then click Clone button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these instructions. Path of the application within the repository is apps/ac/ac_sleepwalk_singleshot/firmware . To build the application, refer to the following table and open the project using its IDE. | Project Name | Description | . | sam_d21_xpro.X | MPLABX project for SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | MPLABX project for SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html#downloading-and-building-the-application",
     "relUrl": "/apps/ac/ac_sleepwalk_singleshot/readme.html#downloading-and-building-the-application"
-  },"214": {
+  },"220": {
     "doc": "AC Sleepwalking",
     "title": "Setting up the hardware",
     "content": "The following table shows the target hardware for the application projects. | Project Name | Board | . | sam_d21_xpro.X | SAM D21 Xplained Pro Evaluation Kit | . | sam_da1_xpro.X | SAM DA1 Xplained Pro Evaluation Kit | . |   |   | . Setting up SAM D21 Xplained Pro Evaluation Kit . | Connect a voltage below VDD to pin 17 of the EXT1 connector | Connect the Debug USB port on the board to the computer using a micro USB cable | . Setting up SAM DA1 Xplained Pro Evaluation Kit . | Connect a voltage below VDD to pin 17 of the EXT1 connector | Connect the Debug USB port on the board to the computer using a micro USB cable | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html#setting-up-the-hardware",
     "relUrl": "/apps/ac/ac_sleepwalk_singleshot/readme.html#setting-up-the-hardware"
-  },"215": {
+  },"221": {
     "doc": "AC Sleepwalking",
     "title": "Running the Application",
     "content": ". | Open the Terminal application (Ex.:Tera term) on the computer | Connect to the EDBG Virtual COM port and configure the serial settings as follows: . | Baud : 115200 | Data : 8 Bits | Parity : None | Stop : 1 Bit | Flow Control : None | . | Build and Program the application using its IDE | Observe output message in console as follows: . | Console displays the message stating whether voltage at AC input is lower or greater than the internal bandgap voltage (1.1 V) | LED toggles when comparison is done | . Below table shows the AC input pin and LED name for the board . | Board | AC input pin | LED name | . | SAM D21 Xplained Pro Evaluation Kit | pin 17 of the EXT1 connector | LED0 | . | SAM DA1 Xplained Pro Evaluation Kit | pin 17 of the EXT1 connector | LED0 | . |   |   |   | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html#running-the-application",
     "relUrl": "/apps/ac/ac_sleepwalk_singleshot/readme.html#running-the-application"
-  },"216": {
+  },"222": {
     "doc": "AC Sleepwalking",
     "title": "AC Sleepwalking",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html",
     "relUrl": "/apps/ac/ac_sleepwalk_singleshot/readme.html"
-  },"217": {
+  },"223": {
     "doc": "Release notes",
     "title": "Microchip MPLAB® Harmony 3 Release Notes",
     "content": " ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/release_notes.html#microchip-mplab-harmony-3-release-notes",
     "relUrl": "/release_notes.html#microchip-mplab-harmony-3-release-notes"
-  },"218": {
+  },"224": {
+    "doc": "Release notes",
+    "title": "Harmony 3 peripheral library application examples for SAM D21/DA1 family  v3.1.0",
+    "content": "Development kit and demo application support . Following table provides number of peripheral library examples available for different development kits. | Development Kits | MPLABx applications | . | SAM D21 Xplained Pro Evaluation Kit | 35 | . | SAM DA1 Xplained Pro Evaluation Kit | 36 | . New Features . | None | . Known Issues . | None | . Development Tools . | MPLAB® X IDE v5.45 | MPLAB® X IDE plug-ins: . | MPLAB® Harmony Configurator (MHC) v3.7.0 | . | MPLAB® XC32 C/C++ Compiler v2.50 | . ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-d21da1-family--v310",
+    "relUrl": "/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-d21da1-family--v310"
+  },"225": {
+    "doc": "Release notes",
+    "title": "Harmony 3 peripheral library application examples for SAM D21/DA1 family  v3.0.1",
+    "content": "New Features . | Added discover.microchip.com metadata | . Bug fixes . | Same as v3.0.0 | . Known Issues . | Same as v3.0.0 | . Development Tools . | Same as v3.0.0 | . ",
+    "url": "http://localhost:4000/csp_apps_sam_d21_da1/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-d21da1-family--v301",
+    "relUrl": "/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-d21da1-family--v301"
+  },"226": {
     "doc": "Release notes",
     "title": "Harmony 3 peripheral library application examples for SAM D21/DA1 family  v3.0.0",
     "content": "Development kit and demo application support . Following table provides number of peripheral library examples available for different development kits. | Development Kits | MPLABx applications | . | SAM D21 Xplained Pro Evaluation Kit | 34 | . | SAM DA1 Xplained Pro Evaluation Kit | 36 | . New Features . New features added in this release are as follows: . | Applications migrated from csp repository to this new application repository for SAM D21/DA1 development boards | . Known Issues . The current known issues are as follows: . | None | . Development Tools . | MPLAB® X IDE v5.40 | MPLAB® X IDE plug-ins: . | MPLAB® Harmony Configurator (MHC) v3.6.0 | . | MPLAB® XC32 C/C++ Compiler v2.41 | . ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-d21da1-family--v300",
     "relUrl": "/release_notes.html#harmony-3-peripheral-library-application-examples-for-sam-d21da1-family--v300"
-  },"219": {
+  },"227": {
     "doc": "Release notes",
     "title": "Release notes",
     "content": ". ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/release_notes.html",
     "relUrl": "/release_notes.html"
-  },"220": {
+  },"228": {
     "doc": "Harmony 3 peripheral library application examples for SAM D21/DA1 family",
     "title": "Harmony 3 peripheral library application examples for SAM D21/DA1 family",
-    "content": "[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com) # Harmony 3 peripheral library application examples for SAM D21/DA1 family MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices. Refer to the following links for more information. - [Microchip 32-bit MCUs](https://www.microchip.com/design-centers/32-bit) - [Microchip 32-bit MPUs](https://www.microchip.com/design-centers/32-bit-mpus) - [Microchip MPLAB X IDE](https://www.microchip.com/mplab/mplab-x-ide) - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony) - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/) This repository contains the MPLAB® Harmony 3 peripheral library application examples for SAM D21/DA1 family - [Release Notes](/csp_apps_sam_d21_da1/release_notes.html) - [MPLAB® Harmony License](/csp_apps_sam_d21_da1/mplab_harmony_license.html) To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki). ## Contents Summary | Folder | Description | --- | --- | apps | Contains peripheral library example applications | docs | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/csp_apps_sam_d21_da1/) of this repository for viewing it online. | ## Code Examples The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries. | Name | Description | ---- | ----------- | [AC Sleepwalking](/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html) | This example application shows how to use the AC Peripheral library to perform a single shot comparison in standby sleep mode periodically and wake up the device at the end of a successful comparison | [AC PWM generation](/csp_apps_sam_d21_da1/apps/ac/ac_wav_gen/readme.html) | This example application shows how to use the Analog Comparator Peripheral library to generate a 1KHz PWM waveform | [ADC DMA sleepwalking](/csp_apps_sam_d21_da1/apps/adc/adc_dmac_sleepwalking/readme.html) | This application shows how to configure the ADC in a sleepwalking operation, where the input voltage is measured at a fixed interval, and then the device is woken from sleep after conversion of 16 samples | [ADC Sample](/csp_apps_sam_d21_da1/apps/adc/adc_sample/readme.html) | This example application shows how to sample an analog input using the ADC and displays the converted samples on a serial terminal | [ADC window sleepwalking](/csp_apps_sam_d21_da1/apps/adc/adc_window_sleepwalking/readme.html) | This application shows how to configure ADC in a sleepwalking operation, where input voltage is measured at a fixed interval, but device is not woken from sleep until the measured value is below a given threshold | [Clock configuration](/csp_apps_sam_d21_da1/apps/clock/clock_config/readme.html) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification | [DAC waveform generation](/csp_apps_sam_d21_da1/apps/dac/dac_wav_gen/readme.html) | This example application shows how to use the DAC to generate a 1 KHz Sine or Sawtooth wave with a lookup table | [DAC waveform generation with DMA](/csp_apps_sam_d21_da1/apps/dac/dac_wav_gen_dma/readme.html) | This example application shows how to use the DAC with the DMA to generate a 5 KHz sinusoidal waveform without CPU intervention | [DMAC memory transfer](/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html) | This example application demonstrates how to use the DMAC peripheral to do a memory to memory transfer | [DMAC USART echo](/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html) | This example application demonstrates USART transfer with DMA to receive 10 bytes and echo back the received bytes | [DSU compute CRC32](/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html) | This example application demonstrates how to use the DSU Peripheral library to compute 32-bit Cyclic Redundancy Checksum (CRC) | [EIC Interrupt](/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html) | This example application demonstrates how to generate interrupt using the EIC on switch press and indicate it through an LED | [NVMCTRL read write](/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html) | This example application demonstrates how to use the NVMCTRL to erase and program the internal Flash memory | [PM reset cause](/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html) | This example shows how to use the PM peripheral to indicate the cause of the device reset | [PM wakeup using EIC](/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html) | This application demonstrates entering the low power modes and exiting it using the EIC | [PM wakeup using RTC](/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html) | This example demonstrates entering the low power modes and exiting it using the RTC | [PORT polling](/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html) | This example application demonstrate how to poll the switch input, and indicate the switch status using the LED | [RTC alarm interrupt](/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html) | This example shows how to use the RTC to configure the time and generate the alarm | [RTC periodic interrupt](/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html) | This example application shows how to use the RTC to generate periodic interrupts | [SERCOM I2C EEPROM read write](/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html) | This example application demonstrates how to use the SERCOM peripheral to write and read from the I2C serial EEPROM memory | [SERCOM I2C EEPROM emulation (I2C slave)](/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html) | This example application demonstrates how to use the SERCOM peripheral in slave mode | [SERCOM SPI EEPROM read write](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html) | This example application demonstrates how to use the SERCOM SPI peripheral to write and read from the SPI serial EEPROM memory | [SERCOM SPI ping pong with DMA](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html) | This example demonstrates how to continuously transmit and receive data over a SPI interface using ping pong buffers with DMA | [SERCOM SPI blocking](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html) | This example application demonstrates how to use the SERCOM SPI peripheral to transmit and receive a block of data in a blocking manner | [SERCOM SPI interrupt](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html) | This example application shows how to use SERCOM SPI PLIB with external loop back to write and then read back an array of data in interrupt mode | [SERCOM SPI Master read write test application](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html) | This is a SPI Master test application which is provided to demonstrate communication between SPI master and the corresponding SPI slave application available under - apps/sercom/spi/slave/spi_write_read/firmware | [SERCOM SPI Slave read write](/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html) | This example application demonstrates how to use the SERCOM SPI peripheral in slave mode | [SERCOM USART blocking](/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html) | This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer block of data in a blocking manner | [SERCOM USART interrupt](/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html) | This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer data in a non-blocking manner | [SERCOM USART ring buffer](/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html) | This example application demonstrates how to use the SERCOM peripheral in USART ring buffer mode to transfer data in a non-blocking manner | [Systick periodic interrupt](/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html) | This example shows how to use the SysTick to generate periodic interrupts | [TC capture mode](/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html) | This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input | [TC compare mode](/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html) | This example shows how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match | [TC timer mode](/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html) | This example shows how to use the TC module in timer mode to generate periodic interrupt | [TCC PWM generation](/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html) | This example application shows how to use the TCC to generate a 2 or 3 phase PWM signals for motor control with dead time | [WDT timeout](/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html) | This example shows how to generate a Watchdog timer reset by emulating a deadlock | ____ [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/blob/master/mplab_harmony_license.md) [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/releases/latest) [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/releases/latest) [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/graphs/commit-activity) [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)]() ____ [![Follow us on Youtube](https://img.shields.io/badge/Youtube-Follow%20us%20on%20Youtube-red.svg)](https://www.youtube.com/user/MicrochipTechnology) [![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20us%20on%20LinkedIn-blue.svg)](https://www.linkedin.com/company/microchip-technology) [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/) [![Follow us on Twitter](https://img.shields.io/twitter/follow/MicrochipTech.svg?style=social)](https://twitter.com/MicrochipTech) [![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg?style=social)]() [![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg?style=social)]() ",
+    "content": "[![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com) # Harmony 3 peripheral library application examples for SAM D21/DA1 family MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices. Refer to the following links for more information. - [Microchip 32-bit MCUs](https://www.microchip.com/design-centers/32-bit) - [Microchip 32-bit MPUs](https://www.microchip.com/design-centers/32-bit-mpus) - [Microchip MPLAB X IDE](https://www.microchip.com/mplab/mplab-x-ide) - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony) - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/) This repository contains the MPLAB® Harmony 3 peripheral library application examples for SAM D21/DA1 family - [Release Notes](/csp_apps_sam_d21_da1/release_notes.html) - [MPLAB® Harmony License](/csp_apps_sam_d21_da1/mplab_harmony_license.html) To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki). ## Contents Summary | Folder | Description | --- | --- | apps | Contains peripheral library example applications | docs | Contains documentation in html format for offline viewing (to be used only after cloning this repository onto a local machine). Use [github pages](https://microchip-mplab-harmony.github.io/csp_apps_sam_d21_da1/) of this repository for viewing it online. | ## Code Examples The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries. | Name | Description | ---- | ----------- | [AC Sleepwalking](/csp_apps_sam_d21_da1/apps/ac/ac_sleepwalk_singleshot/readme.html) | This example application shows how to use the AC Peripheral library to perform a single shot comparison in standby sleep mode periodically and wake up the device at the end of a successful comparison | [AC PWM generation](/csp_apps_sam_d21_da1/apps/ac/ac_wav_gen/readme.html) | This example application shows how to use the Analog Comparator Peripheral library to generate a 1KHz PWM waveform | [ADC DMA sleepwalking](/csp_apps_sam_d21_da1/apps/adc/adc_dmac_sleepwalking/readme.html) | This application shows how to configure the ADC in a sleepwalking operation, where the input voltage is measured at a fixed interval, and then the device is woken from sleep after conversion of 16 samples | [ADC Sample](/csp_apps_sam_d21_da1/apps/adc/adc_sample/readme.html) | This example application shows how to sample an analog input using the ADC and displays the converted samples on a serial terminal | [ADC window sleepwalking](/csp_apps_sam_d21_da1/apps/adc/adc_window_sleepwalking/readme.html) | This application shows how to configure ADC in a sleepwalking operation, where input voltage is measured at a fixed interval, but device is not woken from sleep until the measured value is below a given threshold | [Clock configuration](/csp_apps_sam_d21_da1/apps/clock/clock_config/readme.html) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification | [DAC waveform generation](/csp_apps_sam_d21_da1/apps/dac/dac_wav_gen/readme.html) | This example application shows how to use the DAC to generate a 1 KHz Sine or Sawtooth wave with a lookup table | [DAC waveform generation with DMA](/csp_apps_sam_d21_da1/apps/dac/dac_wav_gen_dma/readme.html) | This example application shows how to use the DAC with the DMA to generate a 5 KHz sinusoidal waveform without CPU intervention | [DMAC CRC-32 Generation](/csp_apps_sam_d21_da1/apps/dmac/dmac_crc32_generate/readme.html) | This example application demonstrates how to use the DMAC peripheral to compute 32-bit Cyclic Redundancy Checksum (CRC) | [DMAC memory transfer](/csp_apps_sam_d21_da1/apps/dmac/dmac_memory_transfer/readme.html) | This example application demonstrates how to use the DMAC peripheral to do a memory to memory transfer | [DMAC USART echo](/csp_apps_sam_d21_da1/apps/dmac/dmac_usart_echo/readme.html) | This example application demonstrates USART transfer with DMA to receive 10 bytes and echo back the received bytes | [DSU compute CRC32](/csp_apps_sam_d21_da1/apps/dsu/dsu_crc32_generate/readme.html) | This example application demonstrates how to use the DSU Peripheral library to compute 32-bit Cyclic Redundancy Checksum (CRC) | [EIC Interrupt](/csp_apps_sam_d21_da1/apps/eic/eic_led_on_off/readme.html) | This example application demonstrates how to generate interrupt using the EIC on switch press and indicate it through an LED | [NVMCTRL read write](/csp_apps_sam_d21_da1/apps/nvmctrl/nvmctrl_flash_read_write/readme.html) | This example application demonstrates how to use the NVMCTRL to erase and program the internal Flash memory | [PM reset cause](/csp_apps_sam_d21_da1/apps/pm/pm_reset_cause/readme.html) | This example shows how to use the PM peripheral to indicate the cause of the device reset | [PM wakeup using EIC](/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_eic/readme.html) | This application demonstrates entering the low power modes and exiting it using the EIC | [PM wakeup using RTC](/csp_apps_sam_d21_da1/apps/pm/pm_wakeup_rtc/readme.html) | This example demonstrates entering the low power modes and exiting it using the RTC | [PORT polling](/csp_apps_sam_d21_da1/apps/port/port_led_on_off_polling/readme.html) | This example application demonstrate how to poll the switch input, and indicate the switch status using the LED | [RTC alarm interrupt](/csp_apps_sam_d21_da1/apps/rtc/rtc_alarm/readme.html) | This example shows how to use the RTC to configure the time and generate the alarm | [RTC periodic interrupt](/csp_apps_sam_d21_da1/apps/rtc/rtc_periodic_timeout/readme.html) | This example application shows how to use the RTC to generate periodic interrupts | [SERCOM I2C EEPROM read write](/csp_apps_sam_d21_da1/apps/sercom/i2c/master/i2c_eeprom/readme.html) | This example application demonstrates how to use the SERCOM peripheral to write and read from the I2C serial EEPROM memory | [SERCOM I2C EEPROM emulation (I2C slave)](/csp_apps_sam_d21_da1/apps/sercom/i2c/slave/i2c_eeprom_emulation/readme.html) | This example application demonstrates how to use the SERCOM peripheral in slave mode | [SERCOM SPI EEPROM read write](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_eeprom_write_read/readme.html) | This example application demonstrates how to use the SERCOM SPI peripheral to write and read from the SPI serial EEPROM memory | [SERCOM SPI ping pong with DMA](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_ping_pong_with_dma/readme.html) | This example demonstrates how to continuously transmit and receive data over a SPI interface using ping pong buffers with DMA | [SERCOM SPI blocking](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_blocking/readme.html) | This example application demonstrates how to use the SERCOM SPI peripheral to transmit and receive a block of data in a blocking manner | [SERCOM SPI interrupt](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_self_loopback_interrupt/readme.html) | This example application shows how to use SERCOM SPI PLIB with external loop back to write and then read back an array of data in interrupt mode | [SERCOM SPI Master read write test application](/csp_apps_sam_d21_da1/apps/sercom/spi/master/spi_write_read_test_app/readme.html) | This is a SPI Master test application which is provided to demonstrate communication between SPI master and the corresponding SPI slave application available under - apps/sercom/spi/slave/spi_write_read/firmware | [SERCOM SPI Slave read write](/csp_apps_sam_d21_da1/apps/sercom/spi/slave/spi_write_read/readme.html) | This example application demonstrates how to use the SERCOM SPI peripheral in slave mode | [SERCOM USART blocking](/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_blocking/readme.html) | This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer block of data in a blocking manner | [SERCOM USART interrupt](/csp_apps_sam_d21_da1/apps/sercom/usart/usart_echo_interrupt/readme.html) | This example application demonstrates how to use the SERCOM peripheral in USART mode to transfer data in a non-blocking manner | [SERCOM USART ring buffer](/csp_apps_sam_d21_da1/apps/sercom/usart/usart_ring_buffer_interrupt/readme.html) | This example application demonstrates how to use the SERCOM peripheral in USART ring buffer mode to transfer data in a non-blocking manner | [Systick periodic interrupt](/csp_apps_sam_d21_da1/apps/systick/systick_periodic_timeout/readme.html) | This example shows how to use the SysTick to generate periodic interrupts | [TC capture mode](/csp_apps_sam_d21_da1/apps/tc/tc_capture_mode/readme.html) | This example shows how to use the TC module in capture mode to measure duty cycle and frequency of an external input | [TC compare mode](/csp_apps_sam_d21_da1/apps/tc/tc_compare_mode/readme.html) | This example shows how to use the TC module in compare mode to generate an active low, active high, and toggle output on compare match | [TC timer mode](/csp_apps_sam_d21_da1/apps/tc/tc_timer_mode/readme.html) | This example shows how to use the TC module in timer mode to generate periodic interrupt | [TCC PWM generation](/csp_apps_sam_d21_da1/apps/tcc/tcc_synchronous_pwm_channels/readme.html) | This example application shows how to use the TCC to generate a 2 or 3 phase PWM signals for motor control with dead time | [WDT timeout](/csp_apps_sam_d21_da1/apps/wdt/wdt_timeout/readme.html) | This example shows how to generate a Watchdog timer reset by emulating a deadlock | ____ [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/blob/master/mplab_harmony_license.md) [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/releases/latest) [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/releases/latest) [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1/graphs/commit-activity) [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg)]() ____ [![Follow us on Youtube](https://img.shields.io/badge/Youtube-Follow%20us%20on%20Youtube-red.svg)](https://www.youtube.com/user/MicrochipTechnology) [![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20us%20on%20LinkedIn-blue.svg)](https://www.linkedin.com/company/microchip-technology) [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/) [![Follow us on Twitter](https://img.shields.io/twitter/follow/MicrochipTech.svg?style=social)](https://twitter.com/MicrochipTech) [![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg?style=social)]() [![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/csp_apps_sam_d21_da1.svg?style=social)]() ",
     "url": "http://localhost:4000/csp_apps_sam_d21_da1/",
     "relUrl": "/"
   }
