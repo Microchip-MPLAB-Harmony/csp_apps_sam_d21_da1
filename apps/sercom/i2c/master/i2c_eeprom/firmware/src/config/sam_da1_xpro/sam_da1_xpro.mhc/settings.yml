@@ -8,6 +8,6 @@ settings:
   PackageFilter: csp;
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
-  CMSISPath: .\dev_packs\arm\CMSIS\5.5.1
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
   MERGE_STRATEGY: USER_ALL
   DFPPath: .\dev_packs\Microchip\SAMDA1_DFP\2.0.17\samda1b\atdf\ATSAMDA1J16B.atdf
