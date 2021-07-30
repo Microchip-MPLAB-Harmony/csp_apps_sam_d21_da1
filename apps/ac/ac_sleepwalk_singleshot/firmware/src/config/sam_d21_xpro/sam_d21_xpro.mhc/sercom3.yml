@@ -10,7 +10,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom3, value: '232'}
+        attributes: {id: sercom3, value: '34'}
   - type: String
     attributes: {id: RECEIVE_DATA_REGISTER}
     children:
@@ -64,7 +64,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom3, value: '23'}
+        attributes: {id: sercom3, value: '3'}
   - type: String
     attributes: {id: TRANSMIT_DATA_REGISTER}
     children:
@@ -78,7 +78,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: sercom3, value: '63019'}
+        attributes: {id: sercom3, value: '50436'}
   - type: KeyValueSet
     attributes: {id: USART_FORM}
     children:
@@ -121,7 +121,7 @@ children:
       - type: Boolean
         attributes: {id: readOnly}
         children:
-        - {type: Value, value: 'true'}
+        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic

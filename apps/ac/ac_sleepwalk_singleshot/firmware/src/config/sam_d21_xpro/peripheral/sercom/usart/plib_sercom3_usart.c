@@ -59,7 +59,7 @@
 
 
 /* SERCOM3 USART baud value for 115200 Hz baud rate */
-#define SERCOM3_USART_INT_BAUD_VALUE            (63019UL)
+#define SERCOM3_USART_INT_BAUD_VALUE            (50436UL)
 
 
 // *****************************************************************************
@@ -134,7 +134,7 @@ void SERCOM3_USART_Initialize( void )
 
 uint32_t SERCOM3_USART_FrequencyGet( void )
 {
-    return 48000000UL;
+    return 8000000UL;
 }
 
 bool SERCOM3_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency )
@@ -152,17 +152,17 @@ bool SERCOM3_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFr
 
         if(clkFrequency >= (16U * serialSetup->baudRate))
         {
-            baudValue = 65536U - ((uint32_t)((uint64_t)65536U * 16U * serialSetup->baudRate) / clkFrequency);
+            baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 16U * serialSetup->baudRate) / clkFrequency);
             sampleRate = 0U;
         }
         else if(clkFrequency >= (8U * serialSetup->baudRate))
         {
-            baudValue = 65536U - ((uint32_t)((uint64_t)65536U * 8U * serialSetup->baudRate) / clkFrequency);
+            baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 8U * serialSetup->baudRate) / clkFrequency);
             sampleRate = 2U;
         }
         else if(clkFrequency >= (3U * serialSetup->baudRate))
         {
-            baudValue = 65536U - ((uint32_t)((uint64_t)65536U * 3U * serialSetup->baudRate) / clkFrequency);
+            baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 3U * serialSetup->baudRate) / clkFrequency);
             sampleRate = 4U;
         }
         else
