@@ -48,6 +48,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: 'false'}
+      - type: User
+        attributes: {value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: CONFIG_CLOCK_OSC8M_ONDEMAND}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
   - type: Boolean
     attributes: {id: CONFIG_CLOCK_OSC8M_RUNSTDY}
     children:
@@ -171,13 +180,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '47972352'}
-  - type: Boolean
-    attributes: {id: GCLK_0_RUNSTDBY}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: 'true'}
   - type: KeyValueSet
     attributes: {id: GCLK_0_SRC}
     children:
@@ -185,8 +187,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '7'}
-      - type: User
-        attributes: {value: '7'}
   - type: Integer
     attributes: {id: GCLK_1_DIV}
     children:
@@ -263,7 +263,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '8000000'}
+  - type: Boolean
+    attributes: {id: GCLK_3_RUNSTDBY}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: GCLK_4_FREQ}
     children:
@@ -309,6 +316,7 @@ children:
         children:
         - type: Values
           children:
+          - {type: Value, value: '    GCLK3_Initialize();'}
           - {type: Value, value: '    GCLK1_Initialize();'}
           - {type: Value, value: '    GCLK2_Initialize();'}
           - {type: Value, value: '    DFLL_Initialize();'}
@@ -354,7 +362,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '47972352'}
+        attributes: {id: core, value: '8000000'}
+  - type: KeyValueSet
+    attributes: {id: GCLK_ID_23_GENSEL}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '3'}
   - type: Boolean
     attributes: {id: GCLK_ID_4_CHEN}
     children:
@@ -385,6 +400,13 @@ children:
         attributes: {value: 'true'}
   - type: Boolean
     attributes: {id: GCLK_INST_NUM2}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: GCLK_INST_NUM3}
     children:
     - type: Values
       children:
@@ -515,7 +537,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '8000000'}
   - type: String
     attributes: {id: PIN_10_FUNCTION_TYPE}
     children:
@@ -2566,7 +2588,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '47972352'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: SERCOM3_INTERRUPT_ENABLE}
     children:
