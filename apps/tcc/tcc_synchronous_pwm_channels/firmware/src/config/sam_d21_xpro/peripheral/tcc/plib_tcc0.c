@@ -202,6 +202,7 @@ void TCC0_InterruptHandler(void)
     status = TCC0_REGS->TCC_INTFLAG;
     /* Clear interrupt flags */
     TCC0_REGS->TCC_INTFLAG = TCC_INTFLAG_Msk;
+    (void)TCC0_REGS->TCC_INTFLAG;
     if (TCC0_CallbackObj.callback_fn != NULL)
     {
         TCC0_CallbackObj.callback_fn(status, TCC0_CallbackObj.context);
