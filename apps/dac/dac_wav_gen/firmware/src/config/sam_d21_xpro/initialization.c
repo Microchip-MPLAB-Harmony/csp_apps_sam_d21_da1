@@ -135,7 +135,6 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_Initialize( );
 
-    EVSYS_Initialize();
 
     EIC_Initialize();
 
