@@ -133,11 +133,10 @@ void SYS_Initialize ( void* data )
 
 
 
-    NVMCTRL_Initialize( );
-
     SERCOM2_I2C_Initialize();
 
-    EVSYS_Initialize();
+    NVMCTRL_Initialize( );
+
 
 
 
