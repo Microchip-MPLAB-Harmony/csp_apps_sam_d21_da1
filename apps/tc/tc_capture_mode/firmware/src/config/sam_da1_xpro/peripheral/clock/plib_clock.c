@@ -47,20 +47,20 @@ static void SYSCTRL_Initialize(void)
     /****************** XOSC32K initialization  ******************************/
 
     /* Configure 32K External Oscillator */
-    SYSCTRL_REGS->SYSCTRL_XOSC32K = SYSCTRL_XOSC32K_STARTUP(0) | SYSCTRL_XOSC32K_ENABLE_Msk | SYSCTRL_XOSC32K_EN32K_Msk | SYSCTRL_XOSC32K_XTALEN_Msk;
+    SYSCTRL_REGS->SYSCTRL_XOSC32K = SYSCTRL_XOSC32K_STARTUP(0U) | SYSCTRL_XOSC32K_ENABLE_Msk | SYSCTRL_XOSC32K_EN32K_Msk | SYSCTRL_XOSC32K_XTALEN_Msk;
     while(!((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_XOSC32KRDY_Msk) == SYSCTRL_PCLKSR_XOSC32KRDY_Msk))
     {
         /* Waiting for the XOSC32K Ready state */
     }
 
-    SYSCTRL_REGS->SYSCTRL_OSC32K = 0x0;
+    SYSCTRL_REGS->SYSCTRL_OSC32K = 0x0U;
 }
 
 
 static void DFLL_Initialize(void)
 {
     /****************** DFLL Initialization  *********************************/
-    SYSCTRL_REGS->SYSCTRL_DFLLCTRL &= ~SYSCTRL_DFLLCTRL_ONDEMAND_Msk;
+    SYSCTRL_REGS->SYSCTRL_DFLLCTRL &= (uint16_t)(~SYSCTRL_DFLLCTRL_ONDEMAND_Msk);
 
     while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_DFLLRDY_Msk) != SYSCTRL_PCLKSR_DFLLRDY_Msk)
     {
@@ -68,11 +68,10 @@ static void DFLL_Initialize(void)
     }
 
     /*Load Calibration Value*/
-    uint8_t calibCoarse = (uint8_t)(((*(uint32_t*)0x806024) >> 26 ) & 0x3f);
-    calibCoarse = (((calibCoarse) == 0x3F) ? 0x1F : (calibCoarse));
-    uint16_t calibFine = (uint16_t)(((*(uint32_t*)0x806028)) & 0x3ff);
+    uint32_t calibCoarse = (((*(uint32_t*)0x806024U) >> 26U ) & 0x3FU);
+    calibCoarse = (((calibCoarse) == 0x3FU) ? 0x1FU : (calibCoarse));
 
-    SYSCTRL_REGS->SYSCTRL_DFLLVAL = SYSCTRL_DFLLVAL_COARSE(calibCoarse) | SYSCTRL_DFLLVAL_FINE(calibFine);
+    SYSCTRL_REGS->SYSCTRL_DFLLVAL = SYSCTRL_DFLLVAL_COARSE(calibCoarse) | SYSCTRL_DFLLVAL_FINE(512U);
 
     while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_DFLLRDY_Msk) != SYSCTRL_PCLKSR_DFLLRDY_Msk)
     {
@@ -92,7 +91,7 @@ static void DFLL_Initialize(void)
 static void GCLK0_Initialize(void)
 {
 
-    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(7) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(0);
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(7U) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(0U);
 
     while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
     {
@@ -103,7 +102,7 @@ static void GCLK0_Initialize(void)
 
 static void GCLK1_Initialize(void)
 {
-    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(5) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(1);
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(5U) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(1U);
 
     while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
     {
@@ -122,20 +121,20 @@ void CLOCK_Initialize (void)
 
 
     /* Selection of the Generator and write Lock for EIC */
-    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(5) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(5U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for EVSYS_0 */
-    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(7) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(7U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for SERCOM3_CORE */
-    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(23) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(23U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for TC3 TCC2 */
-    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(27) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(27U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for TC4 TC5 */
-    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(28) | GCLK_CLKCTRL_GEN(0x0)  | GCLK_CLKCTRL_CLKEN_Msk;
+    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(28U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
 
     /* Configure the APBC Bridge Clocks */
-    PM_REGS->PM_APBCMASK = 0x11822;
+    PM_REGS->PM_APBCMASK = 0x11822U;
 
 
     /*Disable RC oscillator*/
-    SYSCTRL_REGS->SYSCTRL_OSC8M = 0x0;
+    SYSCTRL_REGS->SYSCTRL_OSC8M = 0x0U;
 }
