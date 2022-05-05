@@ -137,7 +137,6 @@ void SYS_Initialize ( void* data )
 
     SERCOM1_SPI_Initialize();
 
-    EVSYS_Initialize();
 
     DMAC_Initialize();
 
