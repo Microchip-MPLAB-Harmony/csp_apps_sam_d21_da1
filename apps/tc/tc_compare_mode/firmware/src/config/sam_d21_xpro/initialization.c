@@ -137,7 +137,6 @@ void SYS_Initialize ( void* data )
 
     TC6_CompareInitialize();
 
-    EVSYS_Initialize();
 
     TC3_CompareInitialize();
 
