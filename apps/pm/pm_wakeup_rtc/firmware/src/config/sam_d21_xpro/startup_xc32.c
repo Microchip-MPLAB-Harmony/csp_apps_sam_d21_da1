@@ -71,7 +71,7 @@ extern uint32_t __svectors;
 
 extern int main(void);
 
-/* Device Vector information is available in interrupt.c file */
+
 
 /* Brief default application function used as a weak reference */
 extern void Dummy_App_Func(void);
@@ -91,7 +91,6 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
     uint32_t *pSrc;
 #endif
 
-
 #if defined (__REINIT_STACK_POINTER)
     /* Initialize SP from linker-defined _stack symbol. */
     __asm__ volatile ("ldr sp, =_stack" : : : "sp");
@@ -103,15 +102,11 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
     __asm__ volatile ("add r7, sp, #0" : : : "r7");
 #endif
 
-
     /* Call the optional application-provided _on_reset() function. */
     _on_reset();
 
     /* Reserved for use by MPLAB XC32. */
     __xc32_on_reset();
-
-
-
 
     /* Initialize data after TCM is enabled.
      * Data initialization from the XC32 .dinit template */
@@ -127,22 +122,21 @@ void __attribute__((optimize("-O1"), section(".text.Reset_Handler"), long_call, 
     /* Initialize the C library */
     __libc_init_array();
 
-
-
-
     /* Call the optional application-provided _on_bootstrap() function. */
     _on_bootstrap();
-    
+
     /* Reserved for use by MPLAB XC32. */
     __xc32_on_bootstrap();
 
     /* Branch to application's main function */
-    int retval = main();
-    (void)retval;
+    (void)main();
 
 #if (defined(__DEBUG) || defined(__DEBUG_D)) && defined(__XC32)
     __builtin_software_breakpoint();
 #endif
-    /* Infinite loop */
-    while (true) {}
+
+    while (true)
+    {
+        /* Infinite loop */
+    }
 }
