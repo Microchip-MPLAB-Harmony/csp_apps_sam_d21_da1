@@ -71,7 +71,10 @@ void WDT_Enable( void )
         WDT_REGS->WDT_CTRL |= WDT_CTRL_ENABLE_Msk;
 
         /* Wait for synchronization */
-        while(WDT_REGS->WDT_STATUS);
+        while(WDT_REGS->WDT_STATUS != 0U)
+        {
+            /* Do nothing */
+        }
     }
 }
 
@@ -79,13 +82,19 @@ void WDT_Enable( void )
 void WDT_Disable( void )
 {
     /* Wait for synchronization */
-    while(WDT_REGS->WDT_STATUS);
+    while(WDT_REGS->WDT_STATUS != 0U)
+    {
+        /* Do nothing */
+    }
 
     /* Disable Watchdog Timer */
-    WDT_REGS->WDT_CTRL &= ~(WDT_CTRL_ENABLE_Msk);
+    WDT_REGS->WDT_CTRL = ((WDT_REGS->WDT_CTRL)&(uint8_t)(~WDT_CTRL_ENABLE_Msk));
 
     /* Wait for synchronization */
-    while(WDT_REGS->WDT_STATUS);
+    while(WDT_REGS->WDT_STATUS != 0U)
+    {
+        /* Do nothing */
+    }
 }
 
 /* If application intends to stay in active mode after clearing WDT, then use WDT_Clear API to clear the WDT. This avoids CPU from waiting or stalling for Synchronization.
@@ -93,7 +102,7 @@ void WDT_Disable( void )
  */
 void WDT_Clear( void )
 {
-    if (WDT_REGS->WDT_STATUS == 0)
+    if (WDT_REGS->WDT_STATUS == 0U)
     {
         /* Clear WDT and reset the WDT timer before the
         timeout occurs */
@@ -108,13 +117,19 @@ void WDT_Clear( void )
 void WDT_ClearWithSync( void )
 {
     /* Wait for synchronization */
-    while(WDT_REGS->WDT_STATUS);
+    while(WDT_REGS->WDT_STATUS != 0U)
+    {
+        /* Do nothing */
+    }
 
     /* Clear WDT and reset the WDT timer before the
     timeout occurs */
     WDT_REGS->WDT_CLEAR = WDT_CLEAR_CLEAR_KEY;
 
     /* Wait for synchronization */
-    while(WDT_REGS->WDT_STATUS);
+    while(WDT_REGS->WDT_STATUS != 0U)
+    {
+        /* Do nothing */
+    }
 }
 
