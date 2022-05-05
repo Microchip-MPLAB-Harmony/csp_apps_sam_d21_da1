@@ -44,14 +44,15 @@
 #include "plib_rtc.h"
 #include "device.h"
 #include <stdlib.h>
+#include <limits.h>
 #include "interrupts.h"
 
-RTC_OBJECT rtcObj;
+ static RTC_OBJECT rtcObj;
 
 static void RTC_CountReadSynchronization(void)
 {
    /* Read-synchronization for COUNT register */
-   RTC_REGS->MODE0.RTC_READREQ = RTC_READREQ_RREQ_Msk | RTC_READREQ_ADDR(0x10);
+   RTC_REGS->MODE0.RTC_READREQ = RTC_READREQ_RREQ_Msk | RTC_READREQ_ADDR(0x10U);
    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
    {
        /* Wait for Read-Synchronization */
@@ -68,14 +69,14 @@ void RTC_Initialize(void)
    }
 
    /* Writing to CTRL register will trigger write-synchronization */
-   RTC_REGS->MODE0.RTC_CTRL = RTC_MODE0_CTRL_MODE(0) | RTC_MODE0_CTRL_PRESCALER(0x0) | RTC_MODE0_CTRL_MATCHCLR_Msk;
+   RTC_REGS->MODE0.RTC_CTRL = RTC_MODE0_CTRL_MODE(0U) | RTC_MODE0_CTRL_PRESCALER(0x0U) | RTC_MODE0_CTRL_MATCHCLR_Msk;
    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
    {
        /* Wait for Write-Synchronization */
    }
 
    /* Writing to COMP register will trigger write-synchronization */
-   RTC_REGS->MODE0.RTC_COMP = 0x100;
+   RTC_REGS->MODE0.RTC_COMP = 0x100U;
    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
    {
        /* Wait for Write-Synchronization */
@@ -99,7 +100,7 @@ void RTC_Timer32Start ( void )
 void RTC_Timer32Stop ( void )
 {
    /* Writing to CTRL register will trigger write-synchronization */
-   RTC_REGS->MODE0.RTC_CTRL &= ~(RTC_MODE0_CTRL_ENABLE_Msk);
+   RTC_REGS->MODE0.RTC_CTRL &= (uint16_t)(~(RTC_MODE0_CTRL_ENABLE_Msk));
    while((RTC_REGS->MODE0.RTC_STATUS & RTC_STATUS_SYNCBUSY_Msk) == RTC_STATUS_SYNCBUSY_Msk)
    {
        /* Wait for Write-Synchronization */
@@ -147,12 +148,12 @@ uint32_t RTC_Timer32FrequencyGet ( void )
 
 void RTC_Timer32InterruptEnable(RTC_TIMER32_INT_MASK interrupt)
 {
-   RTC_REGS->MODE0.RTC_INTENSET = interrupt;
+   RTC_REGS->MODE0.RTC_INTENSET = (uint8_t)interrupt;
 }
 
 void RTC_Timer32InterruptDisable(RTC_TIMER32_INT_MASK interrupt)
 {
-   RTC_REGS->MODE0.RTC_INTENCLR = interrupt;
+   RTC_REGS->MODE0.RTC_INTENCLR = (uint8_t)interrupt;
 }
 
 void RTC_Timer32CallbackRegister ( RTC_TIMER32_CALLBACK callback, uintptr_t context )
