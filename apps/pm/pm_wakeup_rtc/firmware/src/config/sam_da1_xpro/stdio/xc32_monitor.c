@@ -37,37 +37,38 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-
+#include <stddef.h>
 #include "definitions.h"
 
-/* Declaration of these functions are missing in stdio.h for ARM parts*/
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 21.2 deviated four times.  Deviation record ID -  H3_MISRAC_2012_R_21_2_DR_1 */
+extern int read(int handle, void *buffer, unsigned int len);
+extern int write(int handle, void * buffer, size_t count);
 
-#ifdef __arm__
-int _mon_getc(int canblock);
-void _mon_putc(char c);
-#endif //__arm__
 
-int _mon_getc(int canblock)
+int read(int handle, void *buffer, unsigned int len)
 {
-   int c = 0;
-   bool success = false;
-   (void)canblock;
-   do
-   {
-       success = SERCOM3_USART_Read(&c, 1);                
-   }while( !success);
-   return c;
+    int nChars = 0;
+    bool success = false;
+    (void)len;
+    if ((handle == 0)  && (len > 0))
+    {
+        do
+        {
+            success = SERCOM3_USART_Read(buffer, 1);
+        }while( !success);
+        nChars = 1;
+    }
+    return nChars;
 }
 
-void _mon_putc(char c)
+int write(int handle, void * buffer, size_t count)
 {
    bool success = false;
-   do
+   if (handle == 1)
    {
-       success = SERCOM3_USART_Write(&c, 1);
-   }while (!success);
+       do
+       {
+           success = SERCOM3_USART_Write(buffer, count);
+       }while( !success);
+   }
+   return count;
 }
-
-/* MISRAC 2012 deviation block end */
