@@ -47,7 +47,7 @@
 #include "plib_ac.h"
 #include "interrupts.h"
 
-AC_OBJECT acObj;
+static AC_OBJECT acObj;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -65,10 +65,10 @@ void AC_Initialize(void)
     }
      
     /**************** Comparator 0 Configurations ************************/ 
-    AC_REGS->AC_COMPCTRL[0] = AC_COMPCTRL_MUXPOS_PIN0 | AC_COMPCTRL_MUXNEG_VSCALE | AC_COMPCTRL_INTSEL_TOGGLE | AC_COMPCTRL_OUT_ASYNC | AC_COMPCTRL_SPEED(0) | AC_COMPCTRL_FLEN_OFF ;
+    AC_REGS->AC_COMPCTRL[0] = AC_COMPCTRL_MUXPOS_PIN0 | AC_COMPCTRL_MUXNEG_VSCALE | AC_COMPCTRL_INTSEL_TOGGLE | AC_COMPCTRL_OUT_ASYNC | AC_COMPCTRL_SPEED(0U) | AC_COMPCTRL_FLEN_OFF ;
     AC_REGS->AC_COMPCTRL[0] |= AC_COMPCTRL_HYST_Msk;
     AC_REGS->AC_COMPCTRL[0] |= AC_COMPCTRL_ENABLE_Msk;
-    AC_REGS->AC_SCALER[0] = 16;
+    AC_REGS->AC_SCALER[0] = 16U;
 
     AC_REGS->AC_INTENSET =  AC_INTENSET_COMP0_Msk;
     while((AC_REGS->AC_STATUSB & AC_STATUSB_SYNCBUSY_Msk) == AC_STATUSB_SYNCBUSY_Msk)
@@ -81,7 +81,7 @@ void AC_Initialize(void)
 void AC_Start( AC_CHANNEL channel_id )
 {
     /* Start Comparison */
-    AC_REGS->AC_CTRLB |= (1 << channel_id);
+    AC_REGS->AC_CTRLB |= (1U << (uint8_t)channel_id);
 }
 
 void AC_SetVddScalar( AC_CHANNEL channel_id , uint8_t vdd_scalar)
@@ -118,7 +118,7 @@ void AC_ChannelSelect( AC_CHANNEL channel_id , AC_POSINPUT positiveInput, AC_NEG
         /* Wait for Synchronization */
     }
     AC_REGS->AC_COMPCTRL[channel_id] &= ~(AC_COMPCTRL_MUXPOS_Msk | AC_COMPCTRL_MUXNEG_Msk);
-    AC_REGS->AC_COMPCTRL[channel_id] |= (positiveInput | negativeInput);
+    AC_REGS->AC_COMPCTRL[channel_id] |= ((uint32_t)positiveInput | (uint32_t)negativeInput);
 
     /* Enable comparator channel */
     AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_ENABLE_Msk;
@@ -133,9 +133,9 @@ bool AC_StatusGet (AC_CHANNEL channel)
 {
     bool breturnVal = false;
 
-    if((AC_REGS->AC_STATUSB & (AC_STATUSB_READY0_Msk << channel)) == (AC_STATUSB_READY0_Msk << channel))
+    if((AC_REGS->AC_STATUSB & (AC_STATUSB_READY0_Msk << (uint8_t)channel)) == (AC_STATUSB_READY0_Msk << (uint8_t)channel))
     {
-        if((AC_REGS->AC_STATUSA & (AC_STATUSA_STATE0_Msk << channel)) == (AC_STATUSA_STATE0_Msk << channel))
+        if((AC_REGS->AC_STATUSA & (AC_STATUSA_STATE0_Msk << (uint8_t)channel)) == (AC_STATUSA_STATE0_Msk << (uint8_t)channel))
         {
             breturnVal = true;
         }
