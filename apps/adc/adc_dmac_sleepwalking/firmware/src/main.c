@@ -54,7 +54,7 @@
 #include <string.h>
 #include "definitions.h"                // SYS function prototypes
 
-#define ADC_VREF                (3.3f)
+#define ADC_VREF                (1.65f)
 
 #define TRANSFER_SIZE 16
 
