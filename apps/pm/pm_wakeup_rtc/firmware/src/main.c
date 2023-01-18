@@ -69,7 +69,7 @@ uint8_t cmd = 0;
 // *****************************************************************************
 void timeout (uintptr_t context)
 {
-    LED_Toggle();    
+    LED_Toggle();
 }
 
 void configure_alarm(void)
@@ -83,8 +83,8 @@ void display_menu (void)
 {
     printf("\n\n\n\rSelect the low power mode to enter");
     printf("\n\ra) Idle Mode");
-    printf("\n\rb) Standby Mode");   
-    printf("\n\rEnter your choice");    
+    printf("\n\rb) Standby Mode");
+    printf("\n\rEnter your choice");
     scanf("%c", &cmd);
 }
 
@@ -101,11 +101,11 @@ int main ( void )
 
     printf("\n\n\r----------------------------------------------");
     printf("\n\r             Low power demo using RTC           ");
-    printf("\n\r----------------------------------------------"); 
-    
+    printf("\n\r----------------------------------------------");
+
     SYSTICK_TimerCallbackSet(&timeout, (uintptr_t) NULL);
     SYSTICK_TimerStart();
-    RTC_Timer32InterruptEnable(RTC_TIMER32_INT_MASK_COMPARE_MATCH); 
+    RTC_Timer32InterruptEnable(RTC_TIMER32_INT_MASK_COMPARE_MATCH);
     display_menu();
     while(1)
     {
@@ -128,12 +128,14 @@ int main ( void )
             {
                 printf("\n\n\rConfiguring RTC Compare Match for wake up.......");
                 configure_alarm();
-                SYSTICK_TimerStop();
                 printf("\n\rEntering Standby Mode\r\n");
+                SYSTICK_DelayUs(1000);
+                SYSTICK_TimerStop();
                 LED_OFF();
                 PM_StandbyModeEnter();
-                printf("\n\rRTC Compare Match triggered waking up device from Standby mode");
                 SYSTICK_TimerStart();
+                SYSTICK_DelayUs(1000);
+                printf("\n\rRTC Compare Match triggered waking up device from Standby mode");
                 display_menu();
                 break;
             }
@@ -143,7 +145,7 @@ int main ( void )
                 display_menu();
                 break;
             }
-        } 
+        }
     }
 
     /* Execution should not come here during normal operation */
