@@ -122,7 +122,7 @@ int main ( void )
             case STANDBY_SLEEP_MODE:
             {
                 printf("\n\rEntering STANDBY SLEEP Mode");
-                printf("\n\rPress SW0 to wakeup the device  ");
+                printf("\n\rPress SW0 to wakeup the device");
                 SYSTICK_DelayUs(1000);
                 SYSTICK_TimerStop();
                 LED_OFF();
