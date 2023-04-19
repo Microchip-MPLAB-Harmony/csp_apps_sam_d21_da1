@@ -81,6 +81,10 @@ static void GCLK1_Initialize(void)
     }
 }
 
+
+
+
+
 void CLOCK_Initialize (void)
 {
     /* Function to Initialize the Oscillators */
@@ -101,6 +105,8 @@ void CLOCK_Initialize (void)
 
     /* Configure the APBC Bridge Clocks */
     PM_REGS->PM_APBCMASK = 0x10022U;
+
+
 
 
 }
