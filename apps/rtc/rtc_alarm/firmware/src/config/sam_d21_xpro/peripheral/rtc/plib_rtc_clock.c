@@ -70,7 +70,7 @@
 /* Adjust to tm structure month */
 #define ADJUST_TM_STRUCT_MONTH(mon) ((mon) - (1U))
 
-static RTC_OBJECT rtcObj;
+volatile static RTC_OBJECT rtcObj;
 
 static void RTC_ClockReadSynchronization(void)
 {
@@ -119,15 +119,15 @@ bool RTC_RTCCTimeSet (struct tm * initialTime )
 void RTC_RTCCTimeGet ( struct tm * currentTime )
 {
     uint32_t dataClockCalendar = 0U;
-	
-	/* Added temp variable for suppressing MISRA C 2012 Rule : 10.x. 
+
+	/* Added temp variable for suppressing MISRA C 2012 Rule : 10.x.
 	   Please don't ignore this variable for any future modifications */
 	uint32_t temp;
 
     /* Enable read-synchronization for CLOCK register to avoid CPU stall */
     RTC_ClockReadSynchronization();
     dataClockCalendar = RTC_REGS->MODE2.RTC_CLOCK;
-    
+
 	temp = ((dataClockCalendar & RTC_MODE2_CLOCK_HOUR_Msk) >> RTC_MODE2_CLOCK_HOUR_Pos);
     currentTime->tm_hour = (int)temp;
 	temp = ((dataClockCalendar & RTC_MODE2_CLOCK_MINUTE_Msk) >> RTC_MODE2_CLOCK_MINUTE_Pos);
@@ -174,7 +174,7 @@ void RTC_RTCCCallbackRegister ( RTC_CALLBACK callback, uintptr_t context)
 }
 
 
-void RTC_InterruptHandler(void)
+void __attribute__((used)) RTC_InterruptHandler(void)
 {
    rtcObj.intCause = (RTC_CLOCK_INT_MASK) RTC_REGS->MODE2.RTC_INTFLAG;
 
@@ -183,6 +183,8 @@ void RTC_InterruptHandler(void)
 
    if(rtcObj.alarmCallback != NULL)
    {
-       rtcObj.alarmCallback(rtcObj.intCause, rtcObj.context);
+       uintptr_t context = rtcObj.context;
+       RTC_CLOCK_INT_MASK intCause = rtcObj.intCause;
+       rtcObj.alarmCallback(intCause, context);
    }
 }
