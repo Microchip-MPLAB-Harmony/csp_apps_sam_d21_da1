@@ -61,7 +61,7 @@
 // Section: Global Data
 // *****************************************************************************
 // *****************************************************************************
-static ADC_CALLBACK_OBJ ADC_CallbackObject;
+volatile static ADC_CALLBACK_OBJ ADC_CallbackObject;
 
 #define ADC_LINEARITY0_POS  (27U)
 #define ADC_LINEARITY0_Msk   ((0x1FUL << ADC_LINEARITY0_POS))
@@ -123,19 +123,19 @@ void ADC_Initialize( void )
     while((ADC_REGS->ADC_STATUS & ADC_STATUS_SYNCBUSY_Msk) != 0U)
     {
         /* Wait for Synchronization */
-    }    
+    }
     /* Upper threshold for window mode  */
     ADC_REGS->ADC_WINUT = 1024;
     while((ADC_REGS->ADC_STATUS & ADC_STATUS_SYNCBUSY_Msk) != 0U)
     {
         /* Wait for Synchronization */
-    }    
+    }
     /* Lower threshold for window mode  */
     ADC_REGS->ADC_WINLT = 0;
     while((ADC_REGS->ADC_STATUS & ADC_STATUS_SYNCBUSY_Msk) != 0U)
     {
         /* Wait for Synchronization */
-    }    
+    }
     /* Clear all interrupt flags */
     ADC_REGS->ADC_INTFLAG = ADC_INTFLAG_Msk;
     /* Enable interrupts */
@@ -205,7 +205,7 @@ void ADC_ComparisonWindowSet(uint16_t low_threshold, uint16_t high_threshold)
     while((ADC_REGS->ADC_STATUS & ADC_STATUS_SYNCBUSY_Msk) != 0U)
     {
         /* Wait for Synchronization */
-    }    
+    }
     ADC_REGS->ADC_WINUT = high_threshold;
     while((ADC_REGS->ADC_STATUS & ADC_STATUS_SYNCBUSY_Msk) != 0U)
     {
@@ -253,7 +253,7 @@ void ADC_CallbackRegister( ADC_CALLBACK callback, uintptr_t context )
 }
 
 
-void ADC_InterruptHandler( void )
+void __attribute__((used)) ADC_InterruptHandler( void )
 {
     ADC_STATUS status;
     status = (ADC_STATUS) (ADC_REGS->ADC_INTFLAG);
@@ -261,7 +261,8 @@ void ADC_InterruptHandler( void )
     ADC_REGS->ADC_INTFLAG =  ADC_INTENSET_WINMON_Msk;
     if (ADC_CallbackObject.callback != NULL)
     {
-        ADC_CallbackObject.callback(status, ADC_CallbackObject.context);
+        uintptr_t context = ADC_CallbackObject.context;
+        ADC_CallbackObject.callback(status, context);
     }
 }
 

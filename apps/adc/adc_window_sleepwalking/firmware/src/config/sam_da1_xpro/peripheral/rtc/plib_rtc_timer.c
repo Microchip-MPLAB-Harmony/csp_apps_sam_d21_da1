@@ -44,7 +44,6 @@
 #include "plib_rtc.h"
 #include "device.h"
 #include <stdlib.h>
-#include <limits.h>
 #include "interrupts.h"
 
 static void RTC_CountReadSynchronization(void)
@@ -165,8 +164,9 @@ uint32_t RTC_Timer32CounterGet ( void )
 
 uint32_t RTC_Timer32PeriodGet ( void )
 {
-   /* Get 32Bit Compare Value */
-   return (RTC_MODE0_COUNT_COUNT_Msk);
+   
+   return RTC_REGS->MODE0.RTC_COMP;
+   
 }
 
 uint32_t RTC_Timer32FrequencyGet ( void )
