@@ -71,7 +71,7 @@ static void DFLL_Initialize(void)
     }
 
     /*Load Calibration Value*/
-    uint32_t calibCoarse = (((*(uint32_t*)0x806024U) >> 26U ) & 0x3FU);
+    uint32_t calibCoarse = (((*((uint32_t*)0x00806020U + 1U)) >> 26U ) & 0x3FU);
     calibCoarse = (((calibCoarse) == 0x3FU) ? 0x1FU : (calibCoarse));
 
     SYSCTRL_REGS->SYSCTRL_DFLLVAL = SYSCTRL_DFLLVAL_COARSE(calibCoarse) | SYSCTRL_DFLLVAL_FINE(512U);
@@ -95,6 +95,7 @@ static void DFLL_Initialize(void)
     {
         /* Waiting for DFLL to fully lock to meet clock accuracy */
     }
+
 }
 
 
@@ -143,6 +144,10 @@ static void GCLK3_Initialize(void)
     }
 }
 
+
+
+
+
 void CLOCK_Initialize (void)
 {
     /* Function to Initialize the Oscillators */
@@ -162,6 +167,8 @@ void CLOCK_Initialize (void)
 
     /* Configure the APBC Bridge Clocks */
     PM_REGS->PM_APBCMASK = 0x10020U;
+
+
 
 
 }
