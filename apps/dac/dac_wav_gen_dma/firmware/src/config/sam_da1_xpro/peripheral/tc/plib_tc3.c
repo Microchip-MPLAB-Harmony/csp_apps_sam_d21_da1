@@ -86,7 +86,7 @@ void TC3_TimerInitialize( void )
     TC3_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_WAVEGEN_MPWM ;
 
     /* Configure timer period */
-    TC3_REGS->COUNT16.TC_CC[0U] = 96U;
+    TC3_REGS->COUNT16.TC_CC[0U] = 95U;
 
     /* Clear all interrupt flags */
     TC3_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
@@ -131,7 +131,7 @@ void TC3_TimerCommandSet(TC_COMMAND command)
     while((TC3_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
-    }    
+    }
 }
 
 /* Get the current timer counter value */
@@ -188,8 +188,7 @@ uint16_t TC3_Timer16bitPeriodGet( void )
 /* Polling method to check if timer period interrupt flag is set */
 bool TC3_TimerPeriodHasExpired( void )
 {
-    bool timer_status;
-    timer_status = (((TC3_REGS->COUNT16.TC_INTFLAG) & TC_INTFLAG_OVF_Msk)!=0U);
+    uint8_t timer_status = ((TC3_REGS->COUNT16.TC_INTFLAG) & TC_INTFLAG_OVF_Msk);
     TC3_REGS->COUNT16.TC_INTFLAG = timer_status;
-    return timer_status;
+    return (timer_status != 0U);
 }
