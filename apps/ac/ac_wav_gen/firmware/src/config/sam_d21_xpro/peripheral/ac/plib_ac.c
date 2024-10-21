@@ -100,7 +100,7 @@ void AC_SwapInputs( AC_CHANNEL channel_id )
         /* Wait for Synchronization */
     }
     /* Swap inputs of the given comparator */
-    AC_REGS->AC_COMPCTRL[channel_id] = AC_COMPCTRL_SWAP_Msk;
+    AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_SWAP_Msk;
     AC_REGS->AC_COMPCTRL[channel_id] |= AC_COMPCTRL_ENABLE_Msk;
     while((AC_REGS->AC_STATUSB & AC_STATUSB_SYNCBUSY_Msk) == AC_STATUSB_SYNCBUSY_Msk)
     {
