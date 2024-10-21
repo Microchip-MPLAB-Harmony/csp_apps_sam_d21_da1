@@ -45,6 +45,7 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
+
 #include "interrupts.h"
 #include "plib_sercom1_spi_slave.h"
 #include <string.h>
