@@ -72,7 +72,7 @@ volatile static SERCOM_USART_RING_BUFFER_OBJECT sercom3USARTObj;
 #define SERCOM3_USART_READ_BUFFER_SIZE      20U
 #define SERCOM3_USART_READ_BUFFER_9BIT_SIZE     (20U >> 1U)
 #define SERCOM3_USART_RX_INT_DISABLE()      SERCOM3_REGS->USART_INT.SERCOM_INTENCLR = SERCOM_USART_INT_INTENCLR_RXC_Msk
-#define SERCOM3_USART_RX_INT_ENABLE()       SERCOM3_REGS->USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk
+#define SERCOM3_USART_RX_INT_ENABLE()       SERCOM3_REGS->$USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk
 
 volatile static uint8_t SERCOM3_USART_ReadBuffer[SERCOM3_USART_READ_BUFFER_SIZE];
 
@@ -164,6 +164,7 @@ bool SERCOM3_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFr
     bool setupStatus       = false;
     uint32_t baudValue     = 0U;
     uint32_t sampleRate    = 0U;
+    uint32_t sampleCount   = 0U;
 
     if((serialSetup != NULL) && (serialSetup->baudRate != 0U))
     {
@@ -174,23 +175,24 @@ bool SERCOM3_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFr
 
         if(clkFrequency >= (16U * serialSetup->baudRate))
         {
-            baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 16U * serialSetup->baudRate) / clkFrequency);
             sampleRate = 0U;
+            sampleCount = 16U;
         }
         else if(clkFrequency >= (8U * serialSetup->baudRate))
         {
-            baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 8U * serialSetup->baudRate) / clkFrequency);
             sampleRate = 2U;
+            sampleCount = 8U;
         }
         else if(clkFrequency >= (3U * serialSetup->baudRate))
         {
-            baudValue = 65536U - (uint32_t)(((uint64_t)65536U * 3U * serialSetup->baudRate) / clkFrequency);
             sampleRate = 4U;
+            sampleCount = 3U;
         }
         else
         {
             /* Do nothing */
         }
+        baudValue = 65536U - (uint32_t)(((uint64_t)65536U * sampleCount * serialSetup->baudRate) / clkFrequency);
 
         /* Disable the USART before configurations */
         SERCOM3_REGS->USART_INT.SERCOM_CTRLA &= ~SERCOM_USART_INT_CTRLA_ENABLE_Msk;
