@@ -125,9 +125,19 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="eic_led_on_off_sam_d21_xpro_sam_d21_xpro" displayName="eic_led_on_off_sam_d21_xpro_sam_d21_xpro" projectFiles="true">
+        <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/components/cmsis.yml</itemPath>
+          <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/components/core.yml</itemPath>
+          <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/components/dfp.yml</itemPath>
+          <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/components/eic.yml</itemPath>
+          <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/components/evsys.yml</itemPath>
+          <itemPath>eic_led_on_off_sam_d21_xpro_sam_d21_xpro/components/nvmctrl.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/sam_d21_xpro/harmony-manifest-success.yml</itemPath>
-      <itemPath>eic_led_on_off_sam_d21_xpro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -185,7 +195,7 @@
         <targetPluginBoard/>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
