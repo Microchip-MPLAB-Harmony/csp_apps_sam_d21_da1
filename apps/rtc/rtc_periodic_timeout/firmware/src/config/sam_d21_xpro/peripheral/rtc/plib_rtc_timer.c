@@ -46,7 +46,7 @@
 #include <stdlib.h>
 #include "interrupts.h"
 
- volatile static RTC_OBJECT rtcObj;
+ static volatile RTC_OBJECT rtcObj;
 
 static void RTC_CountReadSynchronization(void)
 {
