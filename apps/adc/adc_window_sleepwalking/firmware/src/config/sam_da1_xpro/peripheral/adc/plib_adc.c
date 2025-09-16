@@ -61,7 +61,7 @@
 // Section: Global Data
 // *****************************************************************************
 // *****************************************************************************
-volatile static ADC_CALLBACK_OBJ ADC_CallbackObject;
+static volatile ADC_CALLBACK_OBJ ADC_CallbackObject;
 
 #define ADC_LINEARITY0_POS  (27U)
 #define ADC_LINEARITY0_Msk   ((0x1FUL << ADC_LINEARITY0_POS))
