@@ -128,7 +128,7 @@ void TC6_CompareCommandSet(TC_COMMAND command)
     while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
-    }    
+    }
 }
 
 /* Get the current counter value */
