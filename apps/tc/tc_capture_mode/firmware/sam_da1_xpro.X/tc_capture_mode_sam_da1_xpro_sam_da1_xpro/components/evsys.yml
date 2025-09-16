@@ -1,0 +1,372 @@
+configVersion: 1.0.0
+componentName: evsys
+coreVersion: 5.8.2
+device: ATSAMDA1J16B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: evsys
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: evsys
+          x: '20'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    EVSYS_CHANNEL_0:
+      attributes:
+        id: EVSYS_CHANNEL_0
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_0_GENERATOR:
+      attributes:
+        id: EVSYS_CHANNEL_0_GENERATOR
+      children:
+      - children:
+        - attributes:
+            value: '10'
+          type: User
+        type: Values
+      type: KeyValueSet
+    EVSYS_CHANNEL_0_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_0_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_0_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_0_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_10_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_10_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_10_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_10_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_11_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_11_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_11_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_11_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_1_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_1_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_1_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_1_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_2_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_2_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_2_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_2_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_3_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_3_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_3_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_3_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_4_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_4_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_4_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_4_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_5_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_5_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_5_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_5_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_6_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_6_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_6_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_6_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_7_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_7_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_7_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_7_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_8_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_8_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_8_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_8_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_9_GENERATOR_ACTIVE:
+      attributes:
+        id: EVSYS_CHANNEL_9_GENERATOR_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_CHANNEL_9_USER_READY:
+      attributes:
+        id: EVSYS_CHANNEL_9_USER_READY
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_USER_19:
+      attributes:
+        id: EVSYS_USER_19
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    EVSYS_USER_25:
+      attributes:
+        id: EVSYS_USER_25
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    GENERATOR_EIC_EXTINT_0_ACTIVE:
+      attributes:
+        id: GENERATOR_EIC_EXTINT_0_ACTIVE
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USER_TC3_EVU_READY:
+      attributes:
+        id: USER_TC3_EVU_READY
+      children:
+      - children:
+        - attributes:
+            id: tc3
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USER_TC4_EVU_READY:
+      attributes:
+        id: USER_TC4_EVU_READY
+      children:
+      - children:
+        - attributes:
+            id: tc4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}
