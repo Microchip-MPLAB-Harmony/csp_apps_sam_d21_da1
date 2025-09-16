@@ -58,12 +58,12 @@
 #define SERCOM1_SPI_READ_BUFFER_SIZE            256U
 #define SERCOM1_SPI_WRITE_BUFFER_SIZE           256U
 
-volatile static uint8_t SERCOM1_SPI_ReadBuffer[SERCOM1_SPI_READ_BUFFER_SIZE];
-volatile static uint8_t SERCOM1_SPI_WriteBuffer[SERCOM1_SPI_WRITE_BUFFER_SIZE];
+static volatile uint8_t SERCOM1_SPI_ReadBuffer[SERCOM1_SPI_READ_BUFFER_SIZE];
+static volatile uint8_t SERCOM1_SPI_WriteBuffer[SERCOM1_SPI_WRITE_BUFFER_SIZE];
 
 
 /* Global object to save SPI Exchange related data  */
-volatile static SPI_SLAVE_OBJECT sercom1SPISObj;
+static volatile SPI_SLAVE_OBJECT sercom1SPISObj;
 
 // *****************************************************************************
 // *****************************************************************************
