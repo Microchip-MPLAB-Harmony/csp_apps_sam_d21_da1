@@ -1,0 +1,146 @@
+configVersion: 1.0.0
+componentName: eic
+coreVersion: 5.8.2
+device: ATSAMDA1J16B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: eic
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: eic
+          x: '98'
+          y: '173'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    EIC_CHAN_15:
+      attributes:
+        id: EIC_CHAN_15
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CHAN_5:
+      attributes:
+        id: EIC_CHAN_5
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CONFIG_FILTEN_15:
+      attributes:
+        id: EIC_CONFIG_FILTEN_15
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_CONFIG_SENSE_15:
+      attributes:
+        id: EIC_CONFIG_SENSE_15
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    EIC_CONFIG_SENSE_5:
+      attributes:
+        id: EIC_CONFIG_SENSE_5
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    EIC_EXTINTEO:
+      attributes:
+        id: EIC_EXTINTEO
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EIC_INT:
+      attributes:
+        id: EIC_INT
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '32768'
+          type: Dynamic
+        type: Values
+      type: Hex
+    EIC_INT_15:
+      attributes:
+        id: EIC_INT_15
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_INT_5:
+      attributes:
+        id: EIC_INT_5
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    EIC_WAKEUP:
+      attributes:
+        id: EIC_WAKEUP
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+  userData: {}
