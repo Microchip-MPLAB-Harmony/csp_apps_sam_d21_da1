@@ -1,0 +1,122 @@
+configVersion: 1.0.0
+componentName: sercom3
+coreVersion: 5.8.2
+device: ATSAMDA1J16B
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sercom3
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: CMSIS_5
+  type: package
+  version: 5.9.0
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sercom3
+          x: '164'
+          y: '63'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    I2CM_BAUD:
+      attributes:
+        id: I2CM_BAUD
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: '232'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SPI_BAUD_REG_VALUE:
+      attributes:
+        id: SPI_BAUD_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: '23'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_BAUD_VALUE:
+      attributes:
+        id: USART_BAUD_VALUE
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: '63019'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_FORM:
+      attributes:
+        id: USART_FORM
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    USART_LIN_MASTER_SUPPORTED:
+      attributes:
+        id: USART_LIN_MASTER_SUPPORTED
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_RXPO:
+      attributes:
+        id: USART_RXPO
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    USART_SAMPLE_COUNT:
+      attributes:
+        id: USART_SAMPLE_COUNT
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_SAMPLE_RATE:
+      attributes:
+        id: USART_SAMPLE_RATE
+      children:
+      - children:
+        - attributes:
+            id: sercom3
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
