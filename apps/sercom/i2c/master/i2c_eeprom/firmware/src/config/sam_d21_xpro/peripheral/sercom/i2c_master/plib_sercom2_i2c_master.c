@@ -65,7 +65,7 @@
 #define SERCOM2_I2CM_BAUD_VALUE         (0x34U)
 
 
-volatile static SERCOM_I2C_OBJ sercom2I2CObj;
+static volatile SERCOM_I2C_OBJ sercom2I2CObj;
 
 // *****************************************************************************
 // *****************************************************************************
