@@ -3,6 +3,32 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 peripheral library application examples for SAM D21/DA1 family v3.6.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLAB X applications |
+|:-----------------:|:-------------------:|
+| [SAM D21 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsamd21-xpro) | 35 |
+| [SAM DA1 Xplained Pro Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/ATSAMDA1-XPRO) | 36 |
+
+### New Features
+
+- None
+
+### Known Issues
+
+- None
+
+### Development Tools
+
+- [MPLAB® X IDE 6.25](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Code Configurator (MCC) 5.6.2
+- [MPLAB® XC32 C/C++ Compiler 4.60](https://www.microchip.com/mplab/compilers)
+
 ## Harmony 3 peripheral library application examples for SAM D21/DA1 family v3.5.0
 
 ### Development kit and demo application support
