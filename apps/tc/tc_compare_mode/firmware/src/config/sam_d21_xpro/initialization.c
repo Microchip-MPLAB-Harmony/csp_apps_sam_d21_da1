@@ -141,9 +141,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    NVMCTRL_Initialize( );
-
     TC6_CompareInitialize();
+
+    NVMCTRL_Initialize( );
 
 
     TC3_CompareInitialize();

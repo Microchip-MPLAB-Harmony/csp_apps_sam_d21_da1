@@ -149,7 +149,7 @@
         <itemPath>spi_ping_pong_with_dma_sam_d21_xpro_sam_d21_xpro/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/sam_d21_xpro/harmony-manifest-success.yml</itemPath>
+      <itemPath>../src/config/sam_d21_xpro/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -221,7 +221,7 @@
       </toolsSet>
       <packs>
         <pack name="SAMD21_DFP" vendor="Microchip" version="3.6.144"/>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

@@ -15,7 +15,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_da1_xpro\ATSAMDA1J16B.ld
   hash: 14ff5021c9d243a1c5417114fa63d36c79c394dd9c733554aa6cbd10267fcb95
 - file: ..\src\config\sam_da1_xpro\definitions.h
-  hash: 88f3d611f8e573eb2524c09b59bf1531f414624236ba176d9319ffbef68b97af
+  hash: b5ce726f7bf4aa54d11db7e010bb59067b18acd321599c10c4051a030fb9265d
 - file: ..\src\config\sam_da1_xpro\device.h
   hash: d14f57f3c1d729021ef5c4e2906984ad14ba5cf7f10d9d0b9df42fbf0b876ee5
 - file: ..\src\config\sam_da1_xpro\device_cache.h
@@ -25,7 +25,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\sam_da1_xpro\exceptions.c
   hash: 42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987
 - file: ..\src\config\sam_da1_xpro\initialization.c
-  hash: 2665a27d52ccdee2232dc56a340745fee1e4f74d56399a3bff2b41612308e914
+  hash: 5d19246111eb926cf0f06e7e14416560607c0814f4367e3f180f8b73b69aeec9
 - file: ..\src\config\sam_da1_xpro\interrupts.c
   hash: d6e907dd309079c5ea869b9b3f1fb68f1c1e1588c07702da96110d0e42161c2d
 - file: ..\src\config\sam_da1_xpro\interrupts.h

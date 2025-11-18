@@ -141,9 +141,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    SERCOM2_I2C_Initialize();
-
     NVMCTRL_Initialize( );
+
+    SERCOM2_I2C_Initialize();
 
 
 
